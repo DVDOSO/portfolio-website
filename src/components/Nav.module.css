@@ -1,0 +1,98 @@
+@media only screen and (min-width: 600px) {
+    
+    .nav {
+        background-color: var(--LIGHT_COLOR_1);
+        padding: 0.5rem;
+        padding-left: 1em;
+        display: flex;
+        align-items: center;
+        gap: clamp(0.5em, 2vw, 2.5em);
+        font-size: clamp(1em, 1vw, 2em);
+        width: 100%;
+        position: fixed;
+        height: 8vh;
+        z-index: 10;
+    }
+
+    .nav::after {
+        display: none;
+    }
+
+    .pageLink:nth-child(7) {
+        margin-left: auto;
+        /* border: 1px solid black; */
+    }
+
+    .logo {
+        width: 4rem;
+        /* border: 1px solid black; */
+        border-radius: 50%;
+    }
+
+    .logo:hover,
+    .logo:focus {
+        transform: scale(105%);
+        transition: all ease 0.5s;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.112);
+    }
+
+    .logo:active {
+        background-color: rgba(0, 0, 0, 0.507);
+        transition: all linear 2ms;
+    }
+
+    .logoLink {
+        padding: 0;
+        /* border: 1px solid black; */
+    }
+
+    .pageLink {
+        padding: 1rem;
+        color: var(--DARK_COLOR_1);
+        text-transform: uppercase;
+        font-family: var(--HEAVY_FONT_1);
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .pageLink:hover,
+    .pageLink:focus {
+        color: var(--ACCENT_COLOR_1);
+        transform: scale(110%);
+        transition: all ease 0.3s;
+        text-decoration: none;
+    }
+
+    .pageLink::after {
+        content: "";
+        position: absolute;
+        bottom: 0.25em;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: var(--ACCENT_COLOR_1);
+        opacity: 1;
+        transform: translate3d(-100%, 0, 0);
+        transition: opacity 300ms, transform 300ms;
+        z-index: 1;
+    }
+
+    .pageLink:hover::after,
+    .pageLink:focus::after {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .pageLink:active {
+        opacity: 70%;
+        transition: all linear 0.2ms;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    nav {
+        display: none;
+    }
+} 

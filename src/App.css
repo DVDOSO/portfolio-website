@@ -1,0 +1,10 @@
+/* Variables */
+:root {
+    --LIGHT_COLOR_1: aliceblue;
+    --DARK_COLOR_1: rgb(14, 14, 118);
+    --DARK_COLOR_2: rgb(2, 2, 144);
+
+    --HEADER_FONT_1: "Merriweather", serif;
+    --PARAGRAPH_FONT_1: "Roboto", sans-serif;
+    --HEAVY_FONT_1: "Oswald", sans-serif;
+}

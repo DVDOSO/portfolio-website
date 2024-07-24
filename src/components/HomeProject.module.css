@@ -15,10 +15,6 @@
     transition: transform 0.5s ease;
 }
 
-.image:hover {
-    transform: scale(105%);
-}
-
 .caption {
     font-family: var(--PARAGRAPH_FONT_1);
     color: white;

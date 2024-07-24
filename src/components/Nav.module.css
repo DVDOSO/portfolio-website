@@ -18,7 +18,7 @@
         display: none;
     }
 
-    .pageLink:nth-child(7) {
+    .pageLink:last-child {
         margin-left: auto;
         /* border: 1px solid black; */
     }

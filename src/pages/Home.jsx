@@ -80,7 +80,7 @@ function Home() {
                     />
                 </section>
                 
-                <Contact color='darkmagenta'/>
+                <Contact color='darkmagenta' line='yes'/>
 
                 <footer>
                     <p>&copy; David Jiang 2024</p>

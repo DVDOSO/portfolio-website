@@ -18,7 +18,8 @@
         max-width: 40%;
     }
 
-    .hero.about .mainCaption {
+    .hero.about .mainCaption,
+    .hero.projects .mainCaption {
         max-width: 60%;
         margin-right: 6vw;
         margin-top: -5vh;
@@ -92,6 +93,15 @@
 
     .footnoteLink:active {
         color: red;
+    }
+
+    .projectBrowser {
+        background-color: rgb(46, 46, 46);
+        padding: 1vw 20vw 1vw 20vw;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5vh;
     }
 
     #headerBold {

@@ -31,12 +31,12 @@ function Nav(props) {
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Resume
                 </a>
-                <a
+                {/* <a
                     className={styles.pageLink}
                     href="/#/blog"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Blog
-                </a>
+                </a> */}
                 <a
                     className={styles.pageLink}
                     href="https://github.com/DVDOSO"

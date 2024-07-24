@@ -1,0 +1,50 @@
+.projectIcon {
+    padding: clamp(1rem, 1vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: max(10vw, 7rem);
+    height: max(10vw, 7rem);
+    background-color: rgb(118, 118, 118);
+    text-align: center;
+    box-shadow: 0 0 1rem black;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    margin: max(1vw, 1rem);
+}
+
+.projectIcon:hover,
+.projectIcon:focus {
+    transform: translateY(-1vh);
+}
+
+.projectIcon:active {
+    background-color: rgb(107, 107, 107);
+}
+
+.projectIcon:visited {
+    box-shadow: 0 0 1rem black;
+}
+
+.icon {
+    width: max(7vw, 5rem);
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.caption {
+    font-family: var(--PARAGRAPH_FONT_1);
+    color: white;
+    font-size: max(1vw, 1rem);
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin-top: 0.5rem;
+}

@@ -85,7 +85,7 @@ function About() {
                 />
             </section>
 
-            <Contact color='aquamarine' />
+            <Contact color='aquamarine' line='yes' />
 
             <footer>
                 <p>&copy; David Jiang 2024</p>

@@ -2,9 +2,13 @@ import Nav from "../components/Nav";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
 import styles from './FoodImages.module.css';
+import HexagonBackground from "../components/HexagonBackground";
 
 function About() {
     return (
+        <>
+        <HexagonBackground image='hexagons/hexagon_about.svg' />
+        <div className="background" />
         <div className="container about">
             <Nav color="aquamarine" />
             <section className="hero about">
@@ -93,6 +97,7 @@ function About() {
             </footer>
 
         </div>
+     </>
     );
 }
 

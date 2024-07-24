@@ -2,9 +2,13 @@ import Nav from "../components/Nav";
 import Section from "../components/Section";
 import ProjectIcon from "../components/ProjectIcon";
 import Contact from "../components/Contact";
+import HexagonBackground from "../components/HexagonBackground";
 
 function Projects() {
     return (
+        <>
+        <HexagonBackground image='hexagons/hexagon_projects.svg' />
+        <div className="background" />
         <div className="container projects">
             <Nav color='tomato'/>
             <section className="hero projects">
@@ -61,6 +65,7 @@ function Projects() {
                 <a className="footnoteLink" href="https://github.com/DVDOSO/portfolio-website">GitHub Repository</a>
             </footer>
         </div>
+        </>
     )
 }
 

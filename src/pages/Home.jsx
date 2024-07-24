@@ -4,12 +4,16 @@ import Section from "../components/Section";
 import Contact from "../components/Contact";
 import HomeProject from "../components/HomeProject";
 import "./styles.css";
+import HexagonBackground from "../components/HexagonBackground";
 
 function Home() {
     return (
         <>
+            <HexagonBackground image='hexagons/hexagon_home.svg' />
+            <div className="background" />
             <div className="container home">
-                <Nav color="darkmagenta" />
+                <Nav color="darkmagenta" />            
+
                 <section className="hero">
                     <article className="mainCaption">
                         <h1 className="mainTitle">

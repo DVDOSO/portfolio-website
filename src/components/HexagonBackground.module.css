@@ -1,0 +1,34 @@
+.hexagonContainer {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.hexagon {
+    position: absolute;
+    animation: fade 10s infinite, spin 20s linear infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

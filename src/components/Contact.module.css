@@ -36,6 +36,7 @@
     box-shadow: 0.1rem 0.1rem 0.5rem gray;
     transition: all ease 0.5s;
     display: inline-block;
+    background-color: aliceblue;
 }
 
 .email:hover,

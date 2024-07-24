@@ -5,6 +5,8 @@ import Contact from "../components/Contact";
 import HomeProject from "../components/HomeProject";
 import "./styles.css";
 import HexagonBackground from "../components/HexagonBackground";
+import 'animate.css';
+import ScrollAnimation from "react-animate-on-scroll";
 
 function Home() {
     return (
@@ -54,15 +56,18 @@ function Home() {
 
 
                 <section className="sections">
-                    <Section
-                        imgPath="laptop_2490636.png"
-                        order="right"
-                        color="darkmagenta"
-                        title="About Me."
-                        text="As a software developer who creates user-friendly products, I am known for focusing on the finer details and aspects of design in all of my work. My passion extends beyond coding through my interests and hobbies."
-                        buttons={[{text: 'Learn more about me!', link: '#/about'}]}
-                        width='20vw'
-                    />
+                    
+                    <ScrollAnimation animateIn="animate__animated animate__bounceIn">
+                        <Section
+                            imgPath="laptop_2490636.png"
+                            order="right"
+                            color="darkmagenta"
+                            title="About Me."
+                            text="As a software developer who creates user-friendly products, I am known for focusing on the finer details and aspects of design in all of my work. My passion extends beyond coding through my interests and hobbies."
+                            buttons={[{text: 'Learn more about me!', link: '#/about'}]}
+                            width='20vw'
+                            />
+                    </ScrollAnimation>
                     
                     <section className="homescreenProjects">
                         <h1 className="header">Here are some of my projects!</h1>
@@ -83,15 +88,17 @@ function Home() {
                         <a href="#/projects" className="projectsLink">Check out the rest of my projects!</a>
                     </section>
 
-                    <Section
-                        imgPath="resume-cv_2427462.png"
-                        order="left"
-                        color="darkmagenta"
-                        title="Qualifications."
-                        text="I strive for excellence in whatever I do, believing that dedication and hard work lead to success. Over the course of my academic and professional career, I have gained numerous valuable skills. I continuously seek opportunities to learn and grow, ensuring I stay at the forefront of my field."
-                        buttons={[{text: 'Download my resume!', link: '#/resume'}/*, {text: 'Contact me!', link: '#/resume'}*/]}
-                        width='18vw'
-                    />
+                    <ScrollAnimation animateIn="animate__animated animate__bounceIn">
+                        <Section
+                            imgPath="resume-cv_2427462.png"
+                            order="left"
+                            color="darkmagenta"
+                            title="Qualifications."
+                            text="I strive for excellence in whatever I do, believing that dedication and hard work lead to success. Over the course of my academic and professional career, I have gained numerous valuable skills. I continuously seek opportunities to learn and grow, ensuring I stay at the forefront of my field."
+                            buttons={[{text: 'Download my resume!', link: '#/resume'}/*, {text: 'Contact me!', link: '#/resume'}*/]}
+                            width='18vw'
+                        />
+                    </ScrollAnimation>
                 </section>
                 <Contact color='darkmagenta' line='yes'/>
                 <footer>

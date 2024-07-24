@@ -9,7 +9,7 @@ import HexagonBackground from "../components/HexagonBackground";
 function Home() {
     return (
         <>
-            <HexagonBackground image='hexagons/hexagon_home.svg' />
+            <HexagonBackground image='hexagons/hexagon_home.svg' opacity={0.8} />
             <div className="background" />
             <div className="container home">
                 <Nav color="darkmagenta" />            
@@ -93,9 +93,7 @@ function Home() {
                         width='18vw'
                     />
                 </section>
-                
                 <Contact color='darkmagenta' line='yes'/>
-
                 <footer>
                     <p>&copy; David Jiang 2024</p>
                     <a className="footnoteLink" href="https://github.com/DVDOSO/portfolio-website">GitHub Repository</a>

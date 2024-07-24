@@ -1,15 +1,35 @@
 .hexagonContainer {
-    position: fixed;
+    position: absolute;
     width: 100%;
     overflow: hidden;
-    height: 100%;
+    height: 130vh;
     pointer-events: none;
     z-index: -1;
+    display: flex;
+    justify-content: space-between;
 }
 
-.hexagon {
+.left {
+    margin-left: min(calc(25vw - 225px), 0px);
+}
+
+.right {
+    transform: scaleX(-1) scaleY(-1) translateY(25vh);
+    margin-right: min(calc(25vw - 225px), 0px);
+}
+
+.hexagon1,
+.hexagon2 {
     position: absolute;
-    animation: fade 10s infinite, spin 20s linear infinite;
+    opacity: var(--OPACITY);
+}
+
+.hexagon1 {
+    animation: spin 20s linear infinite;
+}
+
+.hexagon2 {
+    animation: spin 10s linear infinite;
 }
 
 @keyframes fade {

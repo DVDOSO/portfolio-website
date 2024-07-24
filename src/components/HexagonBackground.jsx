@@ -1,45 +1,38 @@
-import { useEffect, useState } from 'react';
-import styles from './HexagonBackground.module.css';
+import styles from "./HexagonBackground.module.css";
 
 const HexagonBackground = (props) => {
-    const [hexagons, setHexagons] = useState([]);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const newHexagon = {
-                id: Math.random(),
-                top: Math.random() * window.innerHeight,
-                left: Math.random() * window.innerWidth,
-                size: Math.random() * 100 + 300,
-                opacity: 1,
-            };
-            setHexagons((hexagons) => [...hexagons, newHexagon]);
-            setTimeout(() => {
-                setHexagons((hexagons) =>
-                    hexagons.filter((hex) => hex.id !== newHexagon.id)
-                );
-            }, 10000);
-        }, 2000);
-
-        return () => clearInterval(interval);
-    }, []);
-
     return (
-        <div className={styles.hexagonContainer}>
-            {hexagons.map((hex) => (
-                <img
-                    key={hex.id}
-                    className={styles.hexagon}
-                    style={{
-                        top: hex.top,
-                        left: hex.left,
-                        width: hex.size,
-                        height: hex.size,
-                        opacity: hex.opacity,
-                    }}
-                    src={props.image}
-                />
-            ))}
+        <div className={styles.hexagonContainer} style={{"--OPACITY": props.opacity}}>
+            <div className={styles.left}>
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '30vh', "margin-left": "-64px"}} />
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '15vh', "margin-left": "240px"}} />
+                <img className={styles.hexagon2} src={props.image} alt=""
+                style={{"width": '20vh', "margin-left": "112px"}} />
+                <img className={styles.hexagon2} src={props.image} alt=""
+                style={{"width": '20vh', "margin-left": "-64px", "margin-top": "20vh"}} />
+                <img className={styles.hexagon2} src={props.image} alt=""
+                style={{"width": '40vh', "margin-left": "-160px", "margin-top": "40vh"}} />
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '25vh', "margin-left": "-144px", "margin-top": "30vh"}} />
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '20vh', "margin-left": "-96px", "margin-top": "70vh"}} />
+            </div>
+            <div className={styles.right}>
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '30vh', "margin-left": "-64px"}} />
+                <img className={styles.hexagon2} src={props.image} alt=""
+                style={{"width": '20vh', "margin-left": "112px"}} />
+                <img className={styles.hexagon2} src={props.image} alt=""
+                style={{"width": '20vh', "margin-left": "-64px", "margin-top": "20vh"}} />
+                <img className={styles.hexagon2} src={props.image} alt=""
+                style={{"width": '40vh', "margin-left": "-160px", "margin-top": "40vh"}} />
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '25vh', "margin-left": "-144px", "margin-top": "30vh"}} />
+                <img className={styles.hexagon1} src={props.image} alt=""
+                style={{"width": '20vh', "margin-left": "-96px", "margin-top": "70vh"}} />
+            </div>
         </div>
     );
 };

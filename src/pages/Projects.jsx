@@ -7,7 +7,7 @@ import HexagonBackground from "../components/HexagonBackground";
 function Projects() {
     return (
         <>
-        <HexagonBackground image='hexagons/hexagon_projects.svg' />
+        <HexagonBackground image='hexagons/hexagon_projects.svg' opacity={1} />
         <div className="background" />
         <div className="container projects">
             <Nav color='tomato'/>

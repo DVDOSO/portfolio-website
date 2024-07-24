@@ -1,0 +1,54 @@
+.container {
+    text-align: center;
+    padding: 3vh;
+    margin-bottom: 10vh;
+}
+
+.socials {
+    text-align: center;
+}
+
+.header {
+    font-family: var(--HEADER_FONT_1);
+    color: var(--DARK_COLOR_1);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 3vh;
+    margin-top: 8vh;
+}
+
+.blurb {
+    font-family: var(--PARAGRAPH_FONT_1);
+    font-weight: 300;
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.email {
+    border: 2px solid var(--ACCENT_COLOR_1);
+    padding: clamp(0.5rem, 0.7vw, 2rem);
+    display: inline-block;
+    border-radius: 1rem;
+    margin: 3vh;
+    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-family: var(--HEAVY_FONT_1);
+    text-decoration: none;
+    color: var(--DARK_COLOR_1);
+    box-shadow: 0.1rem 0.1rem 0.5rem gray;
+    transition: all ease 0.5s;
+    display: inline-block;
+}
+
+.email:hover,
+.email:focus {
+    background-color: rgb(225, 225, 225);
+    transform: scale(110%);
+}
+
+.dividerContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.divider {
+    width: 60%;
+}

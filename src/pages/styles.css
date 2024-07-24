@@ -18,6 +18,12 @@
         max-width: 40%;
     }
 
+    .hero.about .mainCaption {
+        max-width: 60%;
+        margin-right: 6vw;
+        margin-top: -5vh;
+    }
+
     .mainTitle {
         font-family: var(--HEADER_FONT_1);
         font-size: clamp(2rem, 3vw, 6rem);
@@ -67,6 +73,25 @@
 
     .sections {
         margin-top: -10vh;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    .footnoteLink {
+        color: blue;
+    }
+
+    .footnoteLink:hover,
+    .footnoteLink:focus {
+        opacity: 70%;
+    }
+
+    .footnoteLink:active {
+        color: red;
     }
 
     #headerBold {

@@ -1,0 +1,25 @@
+.images {
+    background-color: rgb(46, 46, 46);
+    position: relative;
+    text-align: center;
+    padding: 2vh 10vw 2vh 10vw;
+    z-index: 10;
+}
+
+.portrait {
+    width: 14.7vw;
+}
+
+.landscape {
+    width: 25vw;
+}
+
+.portrait, .landscape {
+    margin: 1vw;
+    box-shadow: 0 0 2rem;
+    transition: transform ease 0.5s;
+}
+
+.portrait:hover, .landscape:hover {
+    transform: scale(110%);
+}

@@ -1,7 +1,8 @@
 import Nav from "../components/Nav";
 import SocialButton from "../components/SocialButton";
 import Section from "../components/Section";
-import "./Home.css";
+import Contact from "../components/Contact";
+import "./styles.css";
 
 function Home() {
     return (
@@ -45,14 +46,17 @@ function Home() {
                         width={450}
                     />
                 </section>
+
+
                 <section className="sections">
                     <Section
-                        imgPath="avatar.png"
+                        imgPath="laptop_2490636.png"
                         order="right"
                         color="darkmagenta"
                         title="About Me."
-                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+                        text="As a software developer who creates user-friendly products, I am known for focusing on the finer details and aspects of design in all of my work. My passion extends beyond coding through my interests and hobbies."
                         buttons={[{text: 'Learn more about me!', link: '#/about'}]}
+                        width='20vw'
                     />
                     {/* Change format of projects later */}
                     <Section
@@ -62,17 +66,26 @@ function Home() {
                         title="My Projects."
                         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
                         buttons={[{text: 'Check out my projects!', link: '#/projects'}]}
+                        width='25vw'
                     />
+                    {/* Change format of projects later */}
                     <Section
-                        imgPath="avatar.png"
+                        imgPath="resume-cv_2427462.png"
                         order="right"
                         color="darkmagenta"
                         title="Qualifications."
-                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                        buttons={[{text: 'Download my resume!', link: '#/resume'}, {text: 'Contact me!', link: '#/resume'}]}
+                        text="I strive for excellence in whatever I do, believing that dedication and hard work lead to success. Over the course of my academic and professional career, I have gained numerous valuable skills. I continuously seek opportunities to learn and grow, ensuring I stay at the forefront of my field."
+                        buttons={[{text: 'Download my resume!', link: '#/resume'}/*, {text: 'Contact me!', link: '#/resume'}*/]}
+                        width='18vw'
                     />
                 </section>
-                <h2>Contact me!</h2>
+                
+                <Contact color='darkmagenta'/>
+
+                <footer>
+                    <p>&copy; David Jiang 2024</p>
+                    <a className="footnoteLink" href="https://github.com/DVDOSO/portfolio-website">GitHub Repository</a>
+                </footer>
             </div>
         </>
     );

@@ -1,0 +1,53 @@
+.container {
+    padding: clamp(1rem, 1vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: max(1vw, 1rem);
+    width: max(35vw, 25rem);
+    position: relative;
+}
+
+.image {
+    height: 16vw;
+    margin-bottom: max(1vw, 1rem);
+    transition: transform 0.5s ease;
+}
+
+.image:hover {
+    transform: scale(105%);
+}
+
+.caption {
+    font-family: var(--PARAGRAPH_FONT_1);
+    color: white;
+    font-size: max(1vw, 1rem);
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.buttonLink {
+    padding: clamp(0.5rem, 0.7vw, 2rem);
+    margin-right: clamp(0.5rem, 1vw, 2rem);
+    border: 2px solid white;
+    border-radius: 1rem;
+    font-size: clamp(1rem, 1vw, 2rem);
+    font-family: var(--HEAVY_FONT_1);
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 0.5rem gray;
+    transition: all ease 0.5s;
+    display: inline-block;
+}
+
+.buttonLink:hover,
+.buttonLink:focus {
+    background-color: rgb(150, 150, 150);
+    transform: scale(110%);
+}
+
+.buttons {
+    position: relative;
+    bottom: 0;
+}

@@ -2,6 +2,7 @@ import Nav from "../components/Nav";
 import SocialButton from "../components/SocialButton";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
+import HomeProject from "../components/HomeProject";
 import "./styles.css";
 
 function Home() {
@@ -58,20 +59,29 @@ function Home() {
                         buttons={[{text: 'Learn more about me!', link: '#/about'}]}
                         width='20vw'
                     />
-                    {/* Change format of projects later */}
-                    <Section
-                        imgPath="avatar.png"
-                        order="left"
-                        color="darkmagenta"
-                        title="My Projects."
-                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                        buttons={[{text: 'Check out my projects!', link: '#/projects'}]}
-                        width='25vw'
-                    />
-                    {/* Change format of projects later */}
+                    
+                    <section className="homescreenProjects">
+                        <h1 className="header">Here are some of my projects!</h1>
+                        <article className="projectDisplay">
+                            <HomeProject 
+                                image='homeprojects/powerboard.png'
+                                name='PowerBoard'
+                                caption='Powerboard is a task management application. It allows you to visualize and execute tasks more efficiently. I designed the web application from scratch and created it using SvelteKit and the Google Firebase API.'
+                                buttons={[{text: "Try It Out!", link: 'https://powerboard-f656e.web.app/'}, {text: "GitHub Repository", link: "https://github.com/DVDOSO/PowerBoard"}]}
+                            />
+                            <HomeProject 
+                                image='homeprojects/matchdodge.png'
+                                name='Match Dodge'
+                                caption='Created using the Pygame module in Python, this game combines the popular memory card party game with the gameplay of a "Bullet Hell" game. All graphics and UI were designed from scratch in Photoshop.'
+                                buttons={[{text: "Gameplay Demonstration", link: "https://www.youtube.com/watch?v=Yd_JLDGS8_o"}, {text: "GitHub Repository", link: "https://github.com/DVDOSO/MatchDodge"}]}
+                            />
+                        </article>
+                        <a href="#/projects" className="projectsLink">Check out the rest of my projects!</a>
+                    </section>
+
                     <Section
                         imgPath="resume-cv_2427462.png"
-                        order="right"
+                        order="left"
                         color="darkmagenta"
                         title="Qualifications."
                         text="I strive for excellence in whatever I do, believing that dedication and hard work lead to success. Over the course of my academic and professional career, I have gained numerous valuable skills. I continuously seek opportunities to learn and grow, ensuring I stay at the forefront of my field."

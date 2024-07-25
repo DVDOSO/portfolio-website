@@ -4,7 +4,7 @@ function Nav(props) {
     return (
         <>
             <nav className={styles.nav}>
-                <a className={styles.logoLink} href="/">
+                <a className={styles.logoLink} href="/portfolio-website/">
                     <img className={styles.logo} src="avatar.png" alt="icon" />
                 </a>
                 <a

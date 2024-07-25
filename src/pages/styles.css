@@ -9,7 +9,7 @@
     }
 
     ::-webkit-scrollbar-track:hover {
-        box-shadow: inset 0 0 5px gray;
+        box-shadow: inset 0 0 5px black;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -37,6 +37,28 @@
         align-items: center;
         transition: all ease 0.5s;
         animation: fade-in 5s;
+    }
+
+    .scroll {
+        position: absolute;
+        bottom: 10vh;
+        font-family: var(--HEADER_FONT_1);
+        font-size: clamp(1rem, 1vw, 2rem);
+        animation: scaleInterval 3s infinite;
+        color: rgb(152, 152, 152);
+        pointer-events: none;
+    }
+
+    @keyframes scaleInterval {
+        0% {
+            transform: scale(90%);
+        }
+        50% {
+            transform: scale(110%);
+        }
+        100% {
+            transform: scale(90%);
+        }
     }
 
     @keyframes fade-in {
@@ -214,6 +236,6 @@
         align-items: center;
     }
     .avatar {
-        width: min(50vw, 25rem);
+        width: min(50vw, 20rem);
     }
 }

@@ -54,6 +54,7 @@ function About() {
                                     work.
                                 </p>
                             </article>
+                            <p className="scroll">Scroll ▼</p>
                         </section>
 
                         <section className="sections">

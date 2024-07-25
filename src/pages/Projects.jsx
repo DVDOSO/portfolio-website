@@ -57,6 +57,7 @@ function Projects() {
                                     check them out!
                                 </p>
                             </article>
+                            <p className="scroll">Scroll ▼</p>
                         </section>
 
                         <section className="starred">

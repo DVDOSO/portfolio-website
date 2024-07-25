@@ -84,6 +84,7 @@ function Home() {
                                 alt="avatar"
                                 width={450}
                             />
+                        <p className="scroll">Scroll ▼</p>
                         </section>
 
                         <section className="sections">

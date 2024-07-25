@@ -10,7 +10,7 @@
 }
 
 .image {
-    height: 16vw;
+    height: max(16vw, 10rem);
     margin-bottom: max(1vw, 1rem);
     transition: transform 0.5s ease;
 }

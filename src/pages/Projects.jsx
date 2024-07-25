@@ -47,7 +47,7 @@ function Projects() {
                                         My Projects<span id="accent1">.</span>
                                     </b>
                                 </h1>
-                                <p className="caption about">
+                                <p className="caption projects">
                                     Since learning how to code at 11 years old,
                                     I have worked on several projects throughout
                                     my coding journey. Some of these projects

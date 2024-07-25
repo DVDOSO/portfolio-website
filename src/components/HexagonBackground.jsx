@@ -2,7 +2,7 @@ import styles from "./HexagonBackground.module.css";
 
 const HexagonBackground = (props) => {
     return (
-        <div className={styles.hexagonContainer} style={{"--OPACITY": props.opacity}}>
+        <div className={!props.fixed? styles.hexagonContainer : styles.hexagonContainerFixed} style={{"--OPACITY": props.opacity}}>
             <div className={styles.left}>
                 <img className={styles.hexagon1} src={props.image} alt=""
                 style={{"width": '30vh', "margin-left": "-64px"}} />

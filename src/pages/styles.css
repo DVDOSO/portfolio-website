@@ -30,7 +30,6 @@
     }
 
     .hero {
-        padding-top: 5vh;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -75,7 +74,8 @@
     }
 
     .hero.about .mainCaption,
-    .hero.projects .mainCaption {
+    .hero.projects .mainCaption,
+    .hero.resume .mainCaption {
         max-width: 60%;
         margin-right: 6vw;
         margin-top: -5vh;
@@ -230,12 +230,25 @@
         text-align: center;
     }
     .mainCaption {
-        max-width: 75%;
+        max-width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 0;
     }
+
+    .hero.about .mainCaption,
+    .hero.projects .mainCaption,
+    .hero.resume .mainCaption {
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
     .avatar {
-        width: min(50vw, 20rem);
+        display: none;
+    }
+    .scroll {
+        display: none;
     }
 }

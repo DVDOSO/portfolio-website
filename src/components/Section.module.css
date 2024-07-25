@@ -1,5 +1,6 @@
 .section {
-    min-height: 70vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +50,8 @@
 
 .buttonLink {
     padding: clamp(0.5rem, 0.7vw, 2rem);
-    margin-right: clamp(0.5rem, 1vw, 2rem);
+    margin: clamp(0.5rem, 1vw, 2rem);
+    margin-left: 0;
     border: 2px solid var(--ACCENT_COLOR_1);
     border-radius: 1rem;
     font-size: clamp(1rem, 1vw, 2rem);
@@ -62,6 +64,7 @@
     background-color: aliceblue;
 }
 
+
 .buttonLink:hover,
 .buttonLink:focus {
     background-color: rgb(225, 225, 225);
@@ -69,10 +72,35 @@
 }
 
 @media only screen and (orientation: portrait) {
-    img {
-        width: min(50vw, 25rem);
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .figure {
+        padding: 2rem;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 80%;
+    }
+    #right {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    .title::after {
+        content: "";
+        height: clamp(0.1rem, 0.5vw, 0.3rem);
+        position: absolute;
+        bottom: 0;
+        left: 35%;
+        width: 30%;
+        background-color: var(--ACCENT_COLOR_1);
+        opacity: 1;
+        z-index: 1;
     }
     .buttonLink {
-        display: block;
+        margin: clamp(0.5rem, 1vw, 2rem);
     }
 }

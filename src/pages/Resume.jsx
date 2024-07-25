@@ -30,8 +30,25 @@ function Resume() {
             {isLoading && <Loading color="lightskyblue" />}
             {loaded && (
                 <>
-                    <Nav color="lightskyblue" />
-                    <HexagonBackground image="hexagons/hexagon_resume.svg" />
+                    <HexagonBackground image="hexagons/hexagon_resume.svg" opacity={1} fixed='true' />
+
+                    <div className="background"/>
+                    <div className="container resume">
+                        <Nav color="lightskyblue" />
+                        <section className="hero resume">
+                            <article className="mainCaption">
+                                <h1 className="mainTitle">
+                                    <b id="headerBold">
+                                        My Resume<span id="accent1">.</span>
+                                    </b>
+                                </h1>
+                                <p className="caption resume">
+                                    I have a very goo resume please hire me lol.
+                                </p>
+                            </article>
+                            <p className="scroll">Scroll ▼</p>
+                        </section>
+                    </div>
                 </>
             )}
         </>

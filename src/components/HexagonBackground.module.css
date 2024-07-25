@@ -1,4 +1,5 @@
-.hexagonContainer {
+.hexagonContainer,
+.hexagonContainerFixed {
     position: absolute;
     width: 100%;
     overflow: hidden;
@@ -7,6 +8,10 @@
     z-index: -1;
     display: flex;
     justify-content: space-between;
+}
+
+.hexagonContainerFixed {
+    position: fixed;
 }
 
 @keyframes slideRight {
@@ -28,14 +33,14 @@
 }
 
 .left {
-    margin-left: min(calc(25vw - 225px), 0px);
+    margin-left: min(calc(25vw - 275px), 0px);
     animation: slideRight 2s;
 }
 
 .right {
     transform: scaleX(-1) scaleY(-1) translateY(25vh);
     animation: slideLeft 2s;
-    margin-right: min(calc(25vw - 225px), 0px);
+    margin-right: min(calc(25vw - 275px), 0px);
 }
 
 .hexagon1,
@@ -70,5 +75,24 @@
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+@media screen and (orientation: portrait) {
+    .left {
+        transform: rotate(90deg) translate(-65vh, -80vw) scale(-1);
+        animation: slideDown 2s;
+    }
+
+    @keyframes slideDown {
+        0% {
+            transform: rotate(90deg) translate(-110vh, -80vw) scale(-1);
+        }
+        100% {
+            transform: rotate(90deg) translate(-65vh, -80vw) scale(-1);
+        }
+    }
+
+    .right {
+        display: none;
     }
 }

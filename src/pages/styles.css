@@ -4,6 +4,23 @@
         overflow-x: hidden;
     }
 
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+        box-shadow: inset 0 0 5px gray;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(158, 158, 158);
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(84, 84, 84);
+    }
+
     .background {
         background-color: aliceblue;
         height: 100vh;

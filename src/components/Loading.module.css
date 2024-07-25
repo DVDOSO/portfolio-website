@@ -10,7 +10,7 @@
     font-family: var(--HEADER_FONT_1);
     font-size: 20rem;
     z-index: 15;
-    animation: slide 4s;
+    animation: slide 2.5s;
 }
 
 @keyframes slide {

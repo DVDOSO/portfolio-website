@@ -14,7 +14,7 @@ function About() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 4000);
+        }, 2500);
 
         return () => clearTimeout(timer);
     }, []);
@@ -22,7 +22,7 @@ function About() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoaded(true);
-        }, 3000);
+        }, 1500);
 
         return () => clearTimeout(timer);
     }, []);

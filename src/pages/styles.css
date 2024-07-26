@@ -40,7 +40,6 @@
 
     .scroll {
         position: absolute;
-        left: 20vw;
         bottom: 20vh;
         font-family: var(--HEADER_FONT_1);
         font-size: clamp(1rem, 1vw, 2rem);

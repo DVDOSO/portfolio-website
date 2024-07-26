@@ -1,5 +1,5 @@
 to do:
-    - resume
     - blog
     - make food images larger on hover/make them display full screen
     - different background and font colors for pages
+    - change resume download button to sticky

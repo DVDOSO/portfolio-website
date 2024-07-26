@@ -1,15 +1,5 @@
-nav:
-    about me
-    projects
-    resume
-    blog
-    link to github or other important website
-    light/dark theme
-
-
-hero page is just little highlights of all things in nav
-bottom of hero page is socials
-
-on resume page:
-    at end of "skills" have link to projects
-    at end of "hobbies" have link to about and blog
+to do:
+    - resume
+    - blog
+    - make food images larger on hover/make them display full screen
+    - different background and font colors for pages

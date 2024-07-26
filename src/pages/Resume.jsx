@@ -1,9 +1,11 @@
 import Nav from "../components/Nav";
 import HexagonBackground from "../components/HexagonBackground";
-import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
 import Loading from "../components/Loading";
 import { useState, useEffect } from "react";
+import ResumeContent from "../components/ResumeContent";
+import "animate.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import Contact from "../components/Contact";
 
 function Resume() {
     const [isLoading, setIsLoading] = useState(true);
@@ -43,11 +45,14 @@ function Resume() {
                                     </b>
                                 </h1>
                                 <p className="caption resume">
-                                    I have a very goo resume please hire me lol.
+                                Throughout my life, I have developed a wide range of skills, and I am constantly learning and using new ones. Explore my resume to learn more about my journey and achievements.
                                 </p>
                             </article>
                             <p className="scroll">Scroll ▼</p>
                         </section>
+                        <div id="centerHorizontal"><a href="David_Jiang_Resume.pdf" className="resumeDownload" download>Download my Resume!</a></div>
+                        <ResumeContent />
+                        <Contact color="lightskyblue"/>
                     </div>
                 </>
             )}

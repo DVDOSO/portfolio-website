@@ -40,11 +40,12 @@
 
     .scroll {
         position: absolute;
-        bottom: 10vh;
+        left: 20vw;
+        bottom: 20vh;
         font-family: var(--HEADER_FONT_1);
         font-size: clamp(1rem, 1vw, 2rem);
         animation: scaleInterval 3s infinite;
-        color: rgb(152, 152, 152);
+        color: rgba(152, 152, 152, 0.717);
         pointer-events: none;
     }
 
@@ -201,6 +202,42 @@
         margin-top: 5vh;
     }
 
+    .resumeDownload {
+        padding: clamp(1rem, 1vw, 2rem);
+        margin: clamp(0.5rem, 1vw, 2rem);
+        border: 2px solid lightskyblue;
+        border-radius: 1rem;
+        font-size: clamp(1.5rem, 1.5vw, 3rem);
+        font-family: var(--HEAVY_FONT_1);
+        text-decoration: none;
+        color: var(--DARK_COLOR_1);
+        box-shadow: 0.1rem 0.1rem 0.5rem gray;
+        transition: all ease 0.5s;
+        display: inline-block;
+        background-color: aliceblue;
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        animation: scaleIntervalLess 2s infinite;
+    }
+
+    @keyframes scaleIntervalLess {
+        0% {
+            transform: scale(95%);
+        }
+        50% {
+            transform: scale(105%);
+        }
+        100% {
+            transform: scale(95%);
+        }
+    }
+
+    .resumeDownload:hover,
+    .resumeDownload:focus {
+        background-color: rgb(225, 225, 225);
+    }
+    
     #headerBold {
         font-weight: 1000;
     }
@@ -216,11 +253,9 @@
     #nowrap {
         text-wrap: nowrap;
     }
-
-    .temp {
-        margin-top: 100vh;
-        font-size: 20rem;
-        text-align: center;
+    #centerHorizontal {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -248,7 +283,7 @@
     .avatar {
         display: none;
     }
-    .scroll {
+    /* .scroll {
         display: none;
-    }
+    } */
 }

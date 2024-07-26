@@ -13,6 +13,7 @@
     margin-left: clamp(1.5rem, 1.5vw, 3rem);
     margin-top: clamp(8rem, 8vw, 16rem);
     color: var(--DARK_COLOR_1);
+    color:rgb(39, 39, 39);
 }
 
 .h3 {
@@ -20,23 +21,30 @@
     margin: clamp(1rem, 1vw, 2rem);
     margin-left: clamp(1.5rem, 1.5vw, 3rem);
     font-weight: 500;
+    color:rgb(39, 39, 39);
 }
 
 .p {
     font-family: var(--PARAGRAPH_FONT_1);
     margin: clamp(0.5rem, 0.5vw, 1rem);
     margin-left: clamp(1.5rem, 1.5vw, 3rem);
+    font-weight: 300;
+    color:rgb(39, 39, 39);
 }
 
 .ul {
     font-family: var(--PARAGRAPH_FONT_1);
     margin: clamp(0.5rem, 0.5vw, 1rem);
     margin-left: clamp(3rem, 3vw, 6rem);
+    font-weight: 300;
+    color:rgb(39, 39, 39);
 }
 
 .li {
     margin: clamp(0.5rem, 0.5vw, 1rem);
     margin-left: clamp(1.5rem, 1.5vw, 3rem);
+    font-weight: 300;
+    color:rgb(39, 39, 39);
 }
 
 @media screen and (orientation: portrait) {

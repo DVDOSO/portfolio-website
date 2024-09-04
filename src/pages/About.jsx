@@ -74,8 +74,22 @@ function About() {
 
                             <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
-                                    imgPath="data_1197460.png"
+                                    imgPath="crossChristian.png"
                                     order="right"
+                                    color="aquamarine"
+                                    text={
+                                        "I am a Christian, and my faith plays an important role in my life. It guides my values, shapes how I approach challenges, and inspires me to show kindness and integrity in everything I do. My faith motivates me to continually grow, serve others, and strive to live with purpose and compassion."
+                                    }
+                                    width="22vw"
+                                    title="Christian."
+                                    buttons={[{text: "Click here to access the Bible for free.", link: "https://www.biblegateway.com/"}]}
+                                />
+                            </ScrollAnimation>
+
+                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
+                                <Section
+                                    imgPath="data_1197460.png"
+                                    order="left"
                                     color="aquamarine"
                                     text={
                                         "I first started coding at 11 years old, diving into Python and discovering my passion for programming. In high school, I began competitive programming with C++, honing my problem-solving skills and learning to write efficient code.\n\nBy my senior year, I began creating projects and exploring web development, building dynamic websites and applications. This journey has solidified my love for coding and driven me to continuously expand my technical expertise."
@@ -89,7 +103,7 @@ function About() {
                             <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="burgericon.png"
-                                    order="left"
+                                    order="right"
                                     color="aquamarine"
                                     text={
                                         "Beyond coding, I have a deep love for trying new food from different places and cultures. Exploring diverse cuisines allows me to experience the world through its flavors and traditions. Whenever I travel, I prioritize eating at small restaurants as opposed to restaurant chains in order to experience high quality authentic food while simultaneously supporting local businesses.\n\nThis passion extends to the kitchen, where I have always enjoyed cooking ever since I was a child. I regularly watch cooking and food travel videos on YouTube which inspire me to try new dishes and cooking techniques.\n\nBelow are some of the delicious foods I have had the pleasure of trying."
@@ -156,7 +170,7 @@ function About() {
                             <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="sportsicon.png"
-                                    order="right"
+                                    order="left"
                                     color="aquamarine"
                                     text={
                                         "I'm also a passionate sports fan who loves playing all kinds of sports. Whether it's basketball, volleyball, soccer, or any others, I'm always eager to play whenever I am able. As a spectator, I follow the NBA, NHL, and international soccer closely. I support the Toronto Raptors, Toronto Maple Leafs, and the Canadian men's national team. By playing and watching these games, I get to stay active while also bringing excitement and joy to my life."
@@ -170,7 +184,7 @@ function About() {
                             <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="videogames_2737379.png"
-                                    order="left"
+                                    order="right"
                                     color="aquamarine"
                                     text={
                                         "When I have spare time, I like to play video games. Often having a negative stigma among older generations, gaming has evolved remarkably since its inception. I am passionate about gaming as an art form, recognizing its power to convey profound messages and stories.\n\nThe modern gaming industry now creates immersive experiences that blend art, narrative, and technology. In my free time, I enjoy experiencing the seemingly unending passion and drive that game developers pour into their games."

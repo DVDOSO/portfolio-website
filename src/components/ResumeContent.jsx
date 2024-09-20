@@ -94,7 +94,7 @@ function ResumeContent() {
             <p className={styles.p}>September 2024 - Present</p>
             <ul className={styles.ul}>
                 <li className={styles.li}>Honours Computer Science Co-op program</li>
-                <li className={styles.li}>Graduating Summer 2029</li>
+                <li className={styles.li}>Graduating summer 2029</li>
             </ul>
 
             <h3 className={styles.h3}>St. Robert Catholic High School – 8101 Leslie St, Thornhill, ON</h3>

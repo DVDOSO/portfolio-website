@@ -92,6 +92,10 @@ function ResumeContent() {
             <h2 className={styles.h2}>Education</h2>
             <h3 className={styles.h3}>University of Waterloo – 200 University Ave. West, Waterloo, ON</h3>
             <p className={styles.p}>September 2024 - Present</p>
+            <ul className={styles.ul}>
+                <li className={styles.li}>Honours Computer Science Co-op program</li>
+                <li className={styles.li}>Graduating Summer 2029</li>
+            </ul>
 
             <h3 className={styles.h3}>St. Robert Catholic High School – 8101 Leslie St, Thornhill, ON</h3>
             <p className={styles.p}>September 2020 - May 2024</p>

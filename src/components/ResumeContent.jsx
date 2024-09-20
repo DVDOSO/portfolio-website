@@ -98,7 +98,7 @@ function ResumeContent() {
             <ul className={styles.ul}>
                 <li className={styles.li}>Top performing International Baccalaureate (IB) diploma graduate</li>
                 <li className={styles.li}>Achieved 42/45 diploma points, global average is 30/45</li>
-                <li className={styles.li}>Grade average of 96%</li>
+                <li className={styles.li}>Grade average of 97%</li>
                 <li className={styles.li}>Awarded the Leadership in Computer Technology award in graduation ceremony for efforts in coding club</li>
             </ul>
             </ScrollAnimation>

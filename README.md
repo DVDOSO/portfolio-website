@@ -1,8 +1,7 @@
-# React + Vite
+# David Jiang's Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code of David Jiang's portfolio website! This website was created using React.js and Vite.
 
-Currently, two official plugins are available:
+You can visit the website here at (https://dvdoso.github.io/portfolio-website)[https://dvdoso.github.io/portfolio-website]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Thank you for visiting!

@@ -4,7 +4,6 @@ import Loading from "../components/Loading";
 import { useState, useEffect } from "react";
 import ResumeContent from "../components/ResumeContent";
 import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
 import Contact from "../components/Contact";
 
 function Resume() {

@@ -286,3 +286,11 @@
         display: none;
     }
 }
+
+.animate__slideInLeft {
+    max-width: 45%;
+}
+
+.animate__slideInRight {
+    max-width: 45%;
+}

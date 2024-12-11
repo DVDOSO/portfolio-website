@@ -4,7 +4,6 @@ import ProjectIcon from "../components/ProjectIcon";
 import Contact from "../components/Contact";
 import HexagonBackground from "../components/HexagonBackground";
 import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 
@@ -61,7 +60,6 @@ function Projects() {
                         </section>
 
                         <section className="starred">
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="starred/powerboard.png"
                                     order="left"
@@ -82,9 +80,7 @@ function Projects() {
                                         },
                                     ]}
                                 />
-                            </ScrollAnimation>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="starred/matchdodge.png"
                                     order="right"
@@ -105,7 +101,6 @@ function Projects() {
                                         },
                                     ]}
                                 />
-                            </ScrollAnimation>
                         </section>
 
                         {/* Add projects here! */}

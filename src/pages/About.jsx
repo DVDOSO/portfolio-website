@@ -3,7 +3,6 @@ import Section from "../components/Section";
 import Contact from "../components/Contact";
 import styles from "./FoodImages.module.css";
 import HexagonBackground from "../components/HexagonBackground";
-import ScrollAnimation from "react-animate-on-scroll";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 
@@ -58,7 +57,6 @@ function About() {
                         </section>
 
                         <section className="sections">
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="city_3153887.png"
                                     order="left"
@@ -70,9 +68,7 @@ function About() {
                                     title="Committed Learner."
                                     buttons={[]}
                                 />
-                            </ScrollAnimation>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="crossChristian.png"
                                     order="right"
@@ -84,9 +80,7 @@ function About() {
                                     title="Christian."
                                     buttons={[{text: "Click here to access the Bible for free.", link: "https://www.biblegateway.com/"}]}
                                 />
-                            </ScrollAnimation>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="data_1197460.png"
                                     order="left"
@@ -98,9 +92,7 @@ function About() {
                                     title="Programmer."
                                     buttons={[]}
                                 />
-                            </ScrollAnimation>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="burgericon.png"
                                     order="right"
@@ -112,7 +104,6 @@ function About() {
                                     title="Food Fanatic."
                                     buttons={[]}
                                 />
-                            </ScrollAnimation>
 
                             <section className={styles.images}>
                                 <img
@@ -167,7 +158,6 @@ function About() {
                                 />
                             </section>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="sportsicon.png"
                                     order="left"
@@ -179,9 +169,7 @@ function About() {
                                     title="Sports Fan."
                                     buttons={[]}
                                 />
-                            </ScrollAnimation>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="videogames_2737379.png"
                                     order="right"
@@ -193,7 +181,6 @@ function About() {
                                     title="Video Game Enthusiast."
                                     buttons={[]}
                                 />
-                            </ScrollAnimation>
                         </section>
 
                         <Contact color="aquamarine" line="yes" />

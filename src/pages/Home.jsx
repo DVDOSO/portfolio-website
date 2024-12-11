@@ -6,7 +6,6 @@ import HomeProject from "../components/HomeProject";
 import "./styles.css";
 import HexagonBackground from "../components/HexagonBackground";
 import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
 import { useState, useEffect } from "react";
 import Loading from "../components/Loading";
 
@@ -88,7 +87,6 @@ function Home() {
                         </section>
 
                         <section className="sections">
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="laptop_2490636.png"
                                     order="right"
@@ -103,7 +101,6 @@ function Home() {
                                     ]}
                                     width="20vw"
                                 />
-                            </ScrollAnimation>
 
                             <section className="homescreenProjects">
                                 <h1 className="header">
@@ -146,7 +143,6 @@ function Home() {
                                 </a>
                             </section>
 
-                            <ScrollAnimation animateIn="animate__animated animate__bounceIn">
                                 <Section
                                     imgPath="resume-cv_2427462.png"
                                     order="left"
@@ -161,7 +157,6 @@ function Home() {
                                     ]}
                                     width="18vw"
                                 />
-                            </ScrollAnimation>
                         </section>
                         <Contact color="darkmagenta" line="yes" />
                         <footer>

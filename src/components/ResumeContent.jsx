@@ -1,12 +1,10 @@
 import styles from './ResumeContent.module.css';
 import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
 
 function ResumeContent() {
     return (
         <div className={styles.flex}>
         <article className={styles.container}>
-            <ScrollAnimation animateIn="animate__animated animate__fadeInLeft" animateOut="animate__animated animate__fadeOutLeft">
             <h2 className={styles.h2}>Skills</h2>
             <ul className={styles.ul}>
                 <li className={styles.li}><b>Coding:</b> Python (Numpy, Pygame), Java, C, C++ (solved nearly 500 competitive programming problems), Git, SQL, HTML, CSS, SCSS, Bootstrap, Tailwind, JS, TS, React.js, SvelteKit, Google Firebase, SQLite, Vite</li>
@@ -20,9 +18,7 @@ function ResumeContent() {
                 <li className={styles.li}>Excellent verbal and written communication</li>
                 <li className={styles.li}>Reliable and responsible under high stress</li>
             </ul>
-            </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__animated animate__fadeInLeft" animateOut="animate__animated animate__fadeOutLeft">
             <h2 className={styles.h2}>Experience</h2>
             <h3 className={styles.h3}>Coding Club President – St. Robert Catholic High School, Thornhill, ON</h3>
             <p className={styles.p}>October 2021 - June 2024</p>
@@ -59,9 +55,7 @@ function ResumeContent() {
                 <li className={styles.li}>Supported student by enriching understanding of IB curriculum concepts</li>
                 <li className={styles.li}>Taught techniques and tricks to excel on International Baccalaureate French exams</li>
             </ul>
-            </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__animated animate__fadeInLeft" animateOut="animate__animated animate__fadeOutLeft">
             <h2 className={styles.h2}>Honours and Accomplishments</h2>
             <h3 className={styles.h3}>Canadian Computing Competition (CCC) Top 5% Globally</h3>
             <p className={styles.p}>Scored higher than 95% of all contestants globally in the CCC hosted by the University of Waterloo</p>
@@ -86,9 +80,7 @@ function ResumeContent() {
                 <li className={styles.li}>IB Balanced Learner Profile Award (2024)</li>
                 <li className={styles.li}>Highest mark in IB Physics (2023, 2024)</li>
             </ul>
-            </ScrollAnimation>
-
-            <ScrollAnimation animateIn="animate__animated animate__fadeInLeft" animateOut="animate__animated animate__fadeOutLeft">
+            
             <h2 className={styles.h2}>Education</h2>
             <h3 className={styles.h3}>University of Waterloo – 200 University Ave. West, Waterloo, ON</h3>
             <p className={styles.p}>September 2024 - Present</p>
@@ -105,7 +97,6 @@ function ResumeContent() {
                 <li className={styles.li}>Grade average of 97%</li>
                 <li className={styles.li}>Awarded the Leadership in Computer Technology award in graduation ceremony for efforts in coding club</li>
             </ul>
-            </ScrollAnimation>
         </article>
         </div>
     )

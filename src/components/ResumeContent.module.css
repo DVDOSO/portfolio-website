@@ -10,8 +10,8 @@
 .h2 {
     font-family: var(--HEADER_FONT_1);
     margin: clamp(1rem, 2vw, 4rem);
+    margin-bottom: clamp(0.75rem, 1.5vw, 3rem);
     margin-left: clamp(1.5rem, 1.5vw, 3rem);
-    margin-top: clamp(8rem, 8vw, 16rem);
     color: var(--DARK_COLOR_1);
     color:rgb(39, 39, 39);
 }

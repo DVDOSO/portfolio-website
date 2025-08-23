@@ -9,25 +9,25 @@ function Nav(props) {
                 </a>
                 <a
                     className={styles.pageLink}
-                    href="/portfolio-website/"
+                    href="/"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Home
                 </a>
                 <a
                     className={styles.pageLink}
-                    href="/portfolio-website/#/about"
+                    href="/#/about"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     About
                 </a>
                 <a
                     className={styles.pageLink}
-                    href="/portfolio-website/#/projects"
+                    href="/#/projects"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Projects
                 </a>
                 <a
                     className={styles.pageLink}
-                    href="/portfolio-website/#/resume"
+                    href="/#/resume"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Resume
                 </a>

@@ -96,7 +96,7 @@ function Home() {
                                     buttons={[
                                         {
                                             text: "Learn more about me!",
-                                            link: "/portfolio-website/#/about",
+                                            link: "#/about",
                                         },
                                     ]}
                                     width="20vw"
@@ -138,7 +138,7 @@ function Home() {
                                         ]}
                                     />
                                 </article>
-                                <a href="/portfolio-website/#/projects" className="projectsLink">
+                                <a href="#/projects" className="projectsLink">
                                     Check out the rest of my projects!
                                 </a>
                             </section>
@@ -152,8 +152,8 @@ function Home() {
                                     buttons={[
                                         {
                                             text: "Download my resume!",
-                                            link: "/portfolio-website/#/resume",
-                                        } /*, {text: 'Contact me!', link: '#/resume'}*/,
+                                            link: "David_Jiang_Resume.pdf",
+                                        },
                                     ]}
                                     width="18vw"
                                 />

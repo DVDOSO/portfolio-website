@@ -121,9 +121,24 @@ function Projects() {
                                 link="https://github.com/DVDOSO/portfolio-website"
                             />
                             <ProjectIcon
+                                name="Short Clip Generator"
+                                icon="https://marketplace.canva.com/EJqY8/MAGiEqEJqY8/1/tl/canva-blur-neon-camera-logo-with-instagram-gradient-background-icon-MAGiEqEJqY8.png"
+                                link="https://github.com/DVDOSO/Clip-Generator"
+                            />
+                            <ProjectIcon
+                                name="Reading Chrome Extension"
+                                icon="https://static.thenounproject.com/png/1429552-200.png"
+                                link="https://github.com/DVDOSO/read-aloud-chrome-extension"
+                            />
+                            <ProjectIcon
                                 name="Python & SQL Task Planner"
                                 icon="https://cdn4.iconfinder.com/data/icons/project-management-6-2/65/262-512.png"
                                 link="https://github.com/DVDOSO/taskPlanner"
+                            />
+                            <ProjectIcon
+                                name="Programming Journal"
+                                icon="https://cdn-icons-png.flaticon.com/512/1005/1005142.png"
+                                link="https://dvdoso.github.io/dvdoso-competitive-programming-journal/"
                             />
                             <ProjectIcon
                                 name="Pygame Pong"

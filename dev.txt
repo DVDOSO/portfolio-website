@@ -1,3 +1,18 @@
-to do:
-    - blog
-    - 
+High
+------------
+- Figure out what to do with resume tab
+    - Will fix resume tab in the process
+    - Make scrolling activate a slideshow with each section on the resume?
+- Remove/Change slide animation
+
+Medium
+------------
+- Update projects on home page
+- Fix project icon overflow issues
+
+
+Low
+-----------
+- Fix loading issue with homepage
+- Pick new fonts
+- Update About section

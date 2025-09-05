@@ -4,7 +4,7 @@ function Nav(props) {
     return (
         <>
             <nav className={styles.nav}>
-                <a className={styles.logoLink} href="/portfolio-website/">
+                <a className={styles.logoLink} href="/">
                     <img className={styles.logo} src="avatar.png" alt="icon" />
                 </a>
                 <a
@@ -12,12 +12,6 @@ function Nav(props) {
                     href="/"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Home
-                </a>
-                <a
-                    className={styles.pageLink}
-                    href="/#/about"
-                    style={{ "--ACCENT_COLOR_1": props.color }}>
-                    About
                 </a>
                 <a
                     className={styles.pageLink}
@@ -30,6 +24,12 @@ function Nav(props) {
                     href="/#/resume"
                     style={{ "--ACCENT_COLOR_1": props.color }}>
                     Resume
+                </a>
+                <a
+                    className={styles.pageLink}
+                    href="/#/about"
+                    style={{ "--ACCENT_COLOR_1": props.color }}>
+                    About
                 </a>
                 {/* <a
                     className={styles.pageLink}

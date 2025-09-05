@@ -29,7 +29,8 @@
 }
 
 .icon {
-    width: max(7vw, 5rem);
+    width: max(7vw, 6rem);
+    height: max(7vw, 6rem);
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;

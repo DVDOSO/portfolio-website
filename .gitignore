@@ -22,4 +22,5 @@ dev.txt
 *.njsproj
 *.sln
 *.sw?
+.claude/
 

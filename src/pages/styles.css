@@ -81,12 +81,25 @@
         margin-top: -5vh;
     }
 
+    .eyebrow {
+        font-family: var(--MONO_FONT_1);
+        font-size: clamp(0.75rem, 0.85vw, 1rem);
+        padding: 0 clamp(1rem, 1vw, 2rem);
+        color: var(--DARK_COLOR_2);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        opacity: 0.85;
+        margin-bottom: -0.5rem;
+    }
+
     .mainTitle {
         font-family: var(--HEADER_FONT_1);
         font-size: clamp(2rem, 3vw, 6rem);
         padding: clamp(1rem, 1vw, 2rem);
         color: var(--DARK_COLOR_1);
-        font-weight: 400;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        line-height: 1.1;
     }
 
     .hero .caption {
@@ -142,7 +155,8 @@
         color: white;
         font-family: var(--HEADER_FONT_1);
         font-size: clamp(2rem, 2.5vw, 5rem);
-        font-weight: 400;
+        font-weight: 700;
+        letter-spacing: -0.015em;
         margin-bottom: 7vh;
     }
 
@@ -154,23 +168,50 @@
     }
 
     .projectsLink {
-        padding: clamp(0.5rem, 0.7vw, 2rem);
-        border: 2px solid white;
-        margin-top: 10vh;
-        border-radius: 1rem;
-        font-size: clamp(1.5rem, 1.5vw, 2rem);
-        font-family: var(--HEAVY_FONT_1);
-        text-decoration: none;
-        color: white;
-        box-shadow: 0 0 0.5rem gray;
-        transition: all ease 0.5s;
         display: inline-block;
+        padding: 0.8em 1.8em;
+        margin-top: 10vh;
+        font-family: var(--HEADER_FONT_1);
+        font-size: clamp(1rem, 1.1vw, 1.3rem);
+        font-weight: 500;
+        letter-spacing: 0.005em;
+        color: white;
+        background-color: transparent;
+        border: 1.5px solid rgba(255, 255, 255, 0.85);
+        border-radius: 999px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        cursor: pointer;
+        transition:
+            color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+            transform 100ms ease;
+    }
+
+    .projectsLink::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.18);
+        transform: translateY(101%);
+        transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
+        z-index: -1;
     }
 
     .projectsLink:hover,
-    .projectsLink:focus {
-        background-color: rgb(150, 150, 150);
-        transform: scale(110%);
+    .projectsLink:focus-visible {
+        outline: none;
+    }
+
+    .projectsLink:hover::before,
+    .projectsLink:focus-visible::before {
+        transform: translateY(0);
+    }
+
+    .projectsLink:active {
+        transform: scale(0.97);
     }
 
     footer {
@@ -194,55 +235,24 @@
 
     .projectBrowser {
         background-color: rgb(46, 46, 46);
-        padding: 1vw 20vw 1vw 20vw;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        padding: clamp(2.5rem, 5vw, 6rem) clamp(1.25rem, 4vw, 4rem);
         margin-top: 5vh;
     }
 
-    .resumeDownload {
-        padding: clamp(1rem, 1vw, 2rem);
-        margin: clamp(0.5rem, 1vw, 2rem);
-        border: 2px solid lightskyblue;
-        border-radius: 1rem;
-        font-size: clamp(1.5rem, 1.5vw, 3rem);
-        font-family: var(--HEAVY_FONT_1);
-        text-decoration: none;
-        color: var(--DARK_COLOR_1);
-        box-shadow: 0.1rem 0.1rem 0.5rem gray;
-        transition: all ease 0.5s;
-        display: inline-block;
-        background-color: aliceblue;
-        position: fixed;
-        bottom: 0;
-        z-index: 10;
-        animation: scaleIntervalLess 2s infinite;
+    .projectBrowserInner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
+        gap: clamp(1rem, 1.5vw, 1.5rem);
     }
 
-    @keyframes scaleIntervalLess {
-        0% {
-            transform: scale(95%);
-        }
-        50% {
-            transform: scale(105%);
-        }
-        100% {
-            transform: scale(95%);
-        }
-    }
-
-    .resumeDownload:hover,
-    .resumeDownload:focus {
-        background-color: rgb(225, 225, 225);
-    }
-    
     #headerBold {
         font-weight: 1000;
     }
 
     #accent1 {
-        color: lightskyblue;
+        color: aquamarine;
     }
 
     #darkcolor2 {
@@ -287,10 +297,3 @@
     }
 }
 
-.animate__slideInLeft {
-    max-width: 45%;
-}
-
-.animate__slideInRight {
-    max-width: 45%;
-}

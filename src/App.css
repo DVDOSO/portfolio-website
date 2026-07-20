@@ -4,7 +4,15 @@
     --DARK_COLOR_1: rgb(14, 14, 118);
     --DARK_COLOR_2: rgb(2, 2, 144);
 
-    --HEADER_FONT_1: "Merriweather", serif;
-    --PARAGRAPH_FONT_1: "Roboto", sans-serif;
-    --HEAVY_FONT_1: "Oswald", sans-serif;
+    --HEADER_FONT_1: "Space Grotesk", system-ui, sans-serif;
+    --PARAGRAPH_FONT_1: "Space Grotesk", system-ui, sans-serif;
+    --HEAVY_FONT_1: "Space Grotesk", system-ui, sans-serif;
+    --MONO_FONT_1: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html {
+    font-family: var(--PARAGRAPH_FONT_1);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }

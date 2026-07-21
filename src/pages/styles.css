@@ -73,6 +73,10 @@
         max-width: 40%;
     }
 
+    .container.home .hero .mainCaption {
+        margin-top: 10vh;
+    }
+
     .hero.about .mainCaption,
     .hero.projects .mainCaption,
     .hero.resume .mainCaption {

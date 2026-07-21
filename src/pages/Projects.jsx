@@ -25,9 +25,9 @@ function Projects() {
                             </b>
                         </h1>
                         <p className="caption projects">
-                            A mix of internship-adjacent systems, side projects,
-                            and learning experiments — from full-stack computer
-                            vision dashboards to a Gameboy emulator in C.
+                            Systems, side projects, and experiments: from
+                            computer vision dashboards to a Game Boy emulator
+                            in C++.
                         </p>
                     </article>
                     <p className="scroll">Scroll ▼</p>
@@ -38,9 +38,9 @@ function Projects() {
                         imgPath="starred/camera-watch.svg"
                         order="left"
                         color={accent}
-                        title="Camera Watch"
+                        title="Camera Obstruction & Movement Detection App"
                         text={
-                            "A full-stack computer vision dashboard for detecting camera obstructions and view changes. Compares live frames against reference images using three complementary similarity signals — SSIM, ORB feature matching, and RANSAC homography inliers — and flags suspect frames as ALERT or NORMAL.\n\nAn auto-tuning service grid-searches over thresholds to maximize F1 against user-labeled samples, replacing brittle manual tuning. Reached 94.3% accuracy on 500 labeled samples.\n\nAlso ships a synthetic data generator that applies 16 image transforms (occlusion, rotation, perspective, noise) to a base reference image, so users can tune detection without first collecting dozens of real captures.\n\nBuilt with FastAPI (async, Python 3.11), Next.js App Router, React Query, shadcn/ui + Tailwind, PostgreSQL 16, and OpenCV + scikit-image. Containerized end-to-end with Docker Compose and Alembic migrations."
+                            "A full-stack computer vision dashboard that detects camera obstructions and view changes by comparing live frames against references using three complementary signals: SSIM, ORB feature matching, and RANSAC homography inliers. An auto-tuning service grid-searches thresholds to maximize F1 against user labels, reaching 94.3% accuracy on 500 samples.\n\nBuilt with FastAPI, Next.js, React Query, shadcn/ui + Tailwind, PostgreSQL, and OpenCV + scikit-image, containerized end-to-end with Docker Compose."
                         }
                         width="30vw"
                         buttons={[
@@ -52,22 +52,18 @@ function Projects() {
                     />
 
                     <Section
-                        imgPath="starred/powerboard.png"
+                        imgPath="starred/gameboy.png"
                         order="right"
                         color={accent}
                         text={
-                            "PowerBoard is a full-stack task management application that helps you organise your life. With a modern design, it allows you to create, order, and execute tasks more efficiently.\n\nBased on the concept of the Eisenhower matrix, PowerBoard helps prioritize tasks by importance vs. urgency, with hover-to-reveal descriptions.\n\nBuilt with SvelteKit and Google Firebase. Implements Firebase Auth and Realtime Database for persistent multi-device sync, alongside a guest mode backed by in-memory Svelte stores for friction-free trial access without account creation."
+                            "A cycle-aware DMG (original Game Boy) emulator written from scratch in C++ with SDL2, running commercial titles like Tetris and Pokémon Red at full speed. The CPU is a complete LR35902 (SM83) core that passes all 501 opcodes of the SingleStepTests conformance suite.\n\nThe PPU renders background, window, and sprite layers with priority handling and the 10-sprites-per-line hardware limit, backed by MBC1/MBC3 cartridge banking, hardware-accurate DIV/TIMA timers, and full interrupt handling for VBlank, STAT, Timer, Serial, and Joypad events."
                         }
                         width="25vw"
-                        title="PowerBoard"
+                        title="Game Boy Emulator"
                         buttons={[
                             {
-                                text: "Try It Out",
-                                link: "https://powerboard-f656e.web.app/",
-                            },
-                            {
                                 text: "GitHub Repository",
-                                link: "https://github.com/DVDOSO/PowerBoard",
+                                link: "https://github.com/DVDOSO/Gameboy-Emulator",
                             },
                         ]}
                     />
@@ -76,12 +72,17 @@ function Projects() {
                 <section className="projectBrowser">
                     <div className="projectBrowserInner">
                         <ProjectIcon
-                            name="Camera Watch"
+                            name="Camera/Movement Detection App"
                             icon="projecticons/camera-watch.svg"
                             link="https://github.com/DVDOSO/camera-view-recognition"
                         />
                         <ProjectIcon
-                            name="PowerBoard"
+                            name="Gameboy Emulator"
+                            icon="projecticons/gameboy.svg"
+                            link="https://github.com/DVDOSO/Gameboy-Emulator"
+                        />
+                        <ProjectIcon
+                            name="Eisenhower Matrix Planning App"
                             icon="projecticons/powerboard.png"
                             link="https://github.com/DVDOSO/PowerBoard"
                         />
@@ -91,12 +92,7 @@ function Projects() {
                             link="https://github.com/DVDOSO/youtube-mp3-downloader"
                         />
                         <ProjectIcon
-                            name="Gameboy Emulator"
-                            icon="projecticons/gameboy.svg"
-                            link="https://github.com/DVDOSO/Gameboy-Emulator"
-                        />
-                        <ProjectIcon
-                            name="Match Dodge"
+                            name="Pygame Matching Game"
                             icon="https://cdn-icons-png.freepik.com/512/867/867352.png"
                             link="https://github.com/DVDOSO/MatchDodge"
                         />
@@ -106,12 +102,12 @@ function Projects() {
                             link="https://github.com/DVDOSO/portfolio-website"
                         />
                         <ProjectIcon
-                            name="Short Clip Generator"
+                            name="Short-Form Clip Generator"
                             icon="https://marketplace.canva.com/EJqY8/MAGiEqEJqY8/1/tl/canva-blur-neon-camera-logo-with-instagram-gradient-background-icon-MAGiEqEJqY8.png"
                             link="https://github.com/DVDOSO/Clip-Generator"
                         />
                         <ProjectIcon
-                            name="Reading Chrome Extension"
+                            name="Read-Aloud Chrome Extension"
                             icon="https://static.thenounproject.com/png/1429552-200.png"
                             link="https://github.com/DVDOSO/read-aloud-chrome-extension"
                         />
@@ -121,7 +117,7 @@ function Projects() {
                             link="https://github.com/DVDOSO/taskPlanner"
                         />
                         <ProjectIcon
-                            name="Programming Journal"
+                            name="Competitive Programming Journal"
                             icon="https://cdn-icons-png.flaticon.com/512/1005/1005142.png"
                             link="https://dvdoso.github.io/dvdoso-competitive-programming-journal/"
                         />

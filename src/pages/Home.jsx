@@ -33,10 +33,9 @@ function Home() {
                         <p className="caption">
                             Full-stack engineer building practical systems at
                             the intersection of <b id="darkcolor2">web</b> and{" "}
-                            <b id="darkcolor2">computer vision</b>. Currently
-                            interning at <b id="darkcolor2">API Group (Habtech)</b>.
-                            Previously at <b id="darkcolor2">StackAdapt</b>.
-                            Computer Science co-op at the{" "}
+                            <b id="darkcolor2">computer vision</b>.
+                            Previously at <b id="darkcolor2">APi Group Inc</b> and <b id="darkcolor2">StackAdapt</b>.
+                            Computer Science (co-op) at the{" "}
                             <b id="darkcolor2">University of Waterloo</b>.
                         </p>
                         <section className="socials">
@@ -69,7 +68,7 @@ function Home() {
                         order="right"
                         color={accent}
                         title="About Me."
-                        text="I'm a software engineer focused on shipping well-built products end-to-end — from system design through deployment. I care about the details: clean APIs, responsive UIs, and tests that actually catch regressions."
+                        text="I'm a software engineer focused on shipping well-built products end-to-end from system design through deployment. I care about the details: clean APIs, responsive UIs, and tests that actually catch regressions."
                         buttons={[
                             {
                                 text: "Learn more about me",
@@ -87,7 +86,7 @@ function Home() {
                             <HomeProject
                                 image="homeprojects/camera-watch.svg"
                                 name="Camera Watch"
-                                caption="A full-stack computer vision dashboard that flags camera tampering by comparing live frames against reference images using SSIM, ORB feature matching, and RANSAC homography. An auto-tuning service grid-searches detection thresholds against user labels to maximize F1, reaching 94.3% accuracy on 500 labeled samples."
+                                caption="Computer vision dashboard that flags camera tampering by comparing live frames against references with SSIM, ORB, and RANSAC homography. Auto-tuned thresholds reach 94.3% accuracy on 500 labeled samples."
                                 buttons={[
                                     {
                                         text: "GitHub Repository",
@@ -96,17 +95,13 @@ function Home() {
                                 ]}
                             />
                             <HomeProject
-                                image="homeprojects/powerboard.png"
-                                name="PowerBoard"
-                                caption="A full-stack task management application based on the Eisenhower matrix concept. Built from scratch with SvelteKit and Google Firebase, featuring real-time multi-device sync, Firebase Auth, and a friction-free guest mode backed by in-memory Svelte stores."
+                                image="homeprojects/gameboy.png"
+                                name="Game Boy Emulator"
+                                caption="Game Boy emulator built from scratch in C++ with SDL2, running Tetris and Pokémon Red at full speed. Complete LR35902 CPU passing all 501 SingleStepTests opcodes, full PPU rendering, and MBC1/MBC3 cartridge banking."
                                 buttons={[
                                     {
-                                        text: "Try It Out",
-                                        link: "https://powerboard-f656e.web.app/",
-                                    },
-                                    {
                                         text: "GitHub Repository",
-                                        link: "https://github.com/DVDOSO/PowerBoard",
+                                        link: "https://github.com/DVDOSO/Gameboy-Emulator",
                                     },
                                 ]}
                             />

@@ -1,15 +1,16 @@
 .section {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    max-width: 1120px;
+    margin: clamp(4rem, 12vh, 10rem) auto;
+    padding: 0 clamp(1.25rem, 5vw, 4rem);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: clamp(1rem, 3vw, 4rem);
+    justify-content: space-between;
+    gap: clamp(2rem, 5vw, 5rem);
     transition: all ease 0.5s;
 }
 
 .section > div {
-    max-width: 45%;
+    max-width: 48%;
     display: flex;
     align-items: center;
 }
@@ -22,7 +23,24 @@
 }
 
 #right {
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+/* ---------- Text column ---------- */
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.eyebrow {
+    font-family: var(--MONO_FONT_1);
+    font-size: clamp(0.72rem, 0.82vw, 0.95rem);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--DARK_COLOR_2);
+    opacity: 0.8;
+    margin-bottom: 0.9rem;
 }
 
 .title {
@@ -51,18 +69,22 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-size: clamp(1rem, 1vw, 2rem);
-    line-height: 2rem;
-    max-width: 100%;
+    line-height: 1.75;
+    max-width: 46ch;
     font-weight: 300;
-    color:rgb(39, 39, 39);
+    color: rgb(39, 39, 39);
     white-space: pre-wrap;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 1vw, 1rem);
 }
 
 .buttonLink {
     display: inline-block;
     padding: 0.7em 1.5em;
-    margin: clamp(0.5rem, 1vw, 1.25rem);
-    margin-left: 0;
     font-family: var(--HEADER_FONT_1);
     font-size: clamp(0.9rem, 1vw, 1.1rem);
     font-weight: 500;
@@ -106,35 +128,99 @@
     transform: scale(0.97);
 }
 
+/* ---------- Figure column ---------- */
+
+.figureWrap {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(14, 14, 118, 0.45);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+}
+
+.figureWrap:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 42px 80px -32px rgba(14, 14, 118, 0.55);
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    min-width: min(80vw, 20rem);
+    min-height: min(60vw, 17rem);
+    background:
+        radial-gradient(120% 90% at 50% 0%, rgba(var(--ACCENT_RGB), 0.16), transparent 60%),
+        linear-gradient(160deg, #20244a 0%, #14162e 100%);
+    border: 1px solid rgba(var(--ACCENT_RGB), 0.16);
+}
+
+.icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+}
+
+.icon .figure {
+    position: relative;
+    z-index: 1;
+    width: min(72%, 12rem);
+    height: auto;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.35));
+}
+
+/* Recolor single-color raster icons to the accent by masking their shape */
+.icon .tinted {
+    aspect-ratio: 1 / 1;
+    background-color: var(--ACCENT_COLOR_1);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.media {
+    background: #0f1226;
+    border: 1px solid rgba(var(--ACCENT_RGB), 0.14);
+}
+
+.media .figure {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 @media only screen and (orientation: portrait) {
     .section {
         flex-direction: column;
         text-align: center;
-    }
-    .figure {
-        padding: 2rem;
+        padding: 0 1.5rem;
     }
     .text {
-        display: flex;
-        flex-direction: column;
         align-items: center;
+    }
+    .caption {
+        padding-bottom: 2.5rem;
+    }
+    .actions {
+        justify-content: center;
+    }
+    .figureWrap {
+        width: min(90%, 22rem);
     }
     #right {
         flex-direction: column-reverse;
         justify-content: center;
     }
     .title::after {
-        content: "";
-        height: clamp(0.1rem, 0.5vw, 0.3rem);
-        position: absolute;
-        bottom: 0;
         left: 35%;
         width: 30%;
-        background-color: var(--ACCENT_COLOR_1);
-        opacity: 1;
-        z-index: 1;
-    }
-    .buttonLink {
-        margin: clamp(0.5rem, 1vw, 2rem);
     }
 }

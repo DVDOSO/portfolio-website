@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 import HexagonBackground from "../components/HexagonBackground";
 
 function Projects() {
-    const accent = "aquamarine";
+    const accent = "var(--ACCENT)";
 
     return (
         <>
@@ -38,6 +38,8 @@ function Projects() {
                         imgPath="starred/camera-watch.svg"
                         order="left"
                         color={accent}
+                        figureStyle="media"
+                        eyebrow="Featured project"
                         title="Camera Obstruction & Movement Detection App"
                         text={
                             "A full-stack computer vision dashboard that detects camera obstructions and view changes by comparing live frames against references using three complementary signals: SSIM, ORB feature matching, and RANSAC homography inliers. An auto-tuning service grid-searches thresholds to maximize F1 against user labels, reaching 94.3% accuracy on 500 samples.\n\nBuilt with FastAPI, Next.js, React Query, shadcn/ui + Tailwind, PostgreSQL, and OpenCV + scikit-image, containerized end-to-end with Docker Compose."
@@ -52,9 +54,11 @@ function Projects() {
                     />
 
                     <Section
-                        imgPath="starred/gameboy.png"
+                        imgPath="starred/gameboy.svg"
                         order="right"
                         color={accent}
+                        figureStyle="media"
+                        eyebrow="Featured project"
                         text={
                             "A cycle-aware DMG (original Game Boy) emulator written from scratch in C++ with SDL2, running commercial titles like Tetris and Pokémon Red at full speed. The CPU is a complete LR35902 (SM83) core that passes all 501 opcodes of the SingleStepTests conformance suite.\n\nThe PPU renders background, window, and sprite layers with priority handling and the 10-sprites-per-line hardware limit, backed by MBC1/MBC3 cartridge banking, hardware-accurate DIV/TIMA timers, and full interrupt handling for VBlank, STAT, Timer, Serial, and Joypad events."
                         }
@@ -73,62 +77,62 @@ function Projects() {
                     <div className="projectBrowserInner">
                         <ProjectIcon
                             name="Camera/Movement Detection App"
-                            icon="projecticons/camera-watch.svg"
+                            icon="projecticons/ph-camera.svg"
                             link="https://github.com/DVDOSO/camera-view-recognition"
                         />
                         <ProjectIcon
                             name="Gameboy Emulator"
-                            icon="projecticons/gameboy.svg"
+                            icon="projecticons/ph-gameboy.svg"
                             link="https://github.com/DVDOSO/Gameboy-Emulator"
                         />
                         <ProjectIcon
                             name="Eisenhower Matrix Planning App"
-                            icon="projecticons/powerboard.png"
+                            icon="projecticons/ph-powerboard.svg"
                             link="https://github.com/DVDOSO/PowerBoard"
                         />
                         <ProjectIcon
                             name="YouTube to MP3 Converter"
-                            icon="projecticons/youtube-mp3.svg"
+                            icon="projecticons/ph-mp3.svg"
                             link="https://github.com/DVDOSO/youtube-mp3-downloader"
                         />
                         <ProjectIcon
                             name="Pygame Matching Game"
-                            icon="https://cdn-icons-png.freepik.com/512/867/867352.png"
+                            icon="projecticons/ph-matchdodge.svg"
                             link="https://github.com/DVDOSO/MatchDodge"
                         />
                         <ProjectIcon
                             name="Portfolio Website"
-                            icon="avatar.png"
+                            icon="projecticons/ph-portfolio.svg"
                             link="https://github.com/DVDOSO/portfolio-website"
                         />
                         <ProjectIcon
                             name="Short-Form Clip Generator"
-                            icon="https://marketplace.canva.com/EJqY8/MAGiEqEJqY8/1/tl/canva-blur-neon-camera-logo-with-instagram-gradient-background-icon-MAGiEqEJqY8.png"
+                            icon="projecticons/ph-clipgen.svg"
                             link="https://github.com/DVDOSO/Clip-Generator"
                         />
                         <ProjectIcon
                             name="Read-Aloud Chrome Extension"
-                            icon="https://static.thenounproject.com/png/1429552-200.png"
+                            icon="projecticons/ph-readaloud.svg"
                             link="https://github.com/DVDOSO/read-aloud-chrome-extension"
                         />
                         <ProjectIcon
                             name="Python & SQL Task Planner"
-                            icon="https://cdn4.iconfinder.com/data/icons/project-management-6-2/65/262-512.png"
+                            icon="projecticons/ph-taskplanner.svg"
                             link="https://github.com/DVDOSO/taskPlanner"
                         />
                         <ProjectIcon
                             name="Competitive Programming Journal"
-                            icon="https://cdn-icons-png.flaticon.com/512/1005/1005142.png"
+                            icon="projecticons/ph-cpjournal.svg"
                             link="https://dvdoso.github.io/dvdoso-competitive-programming-journal/"
                         />
                         <ProjectIcon
                             name="Pygame Pong"
-                            icon="https://cdn-icons-png.flaticon.com/512/7619/7619818.png"
+                            icon="projecticons/ph-pong.svg"
                             link="https://github.com/DVDOSO/pong"
                         />
                         <ProjectIcon
                             name="Python Wordle"
-                            icon="https://play-lh.googleusercontent.com/6JSPr7ujjFuwqwqS44uhNV4IMNColj2Qe7ENMJWmg_BgTzuW5o70d3HPrxetNWaGC5Bj=w240-h480-rw"
+                            icon="projecticons/ph-wordle.svg"
                             link="https://github.com/DVDOSO/wordle"
                         />
                     </div>

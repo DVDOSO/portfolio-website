@@ -1,8 +1,8 @@
 .images {
-    background-color: rgb(46, 46, 46);
+    background: linear-gradient(180deg, #141733 0%, #0f1128 100%);
     position: relative;
     text-align: center;
-    padding: 2vh 10vw 2vh 10vw;
+    padding: clamp(3rem, 6vw, 6rem) 10vw;
     z-index: 8;
 }
 

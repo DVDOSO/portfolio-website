@@ -15,10 +15,10 @@
     <text y="40" font-size="14" font-weight="400" fill="rgba(255,255,255,0.6)">FastAPI · Next.js · PostgreSQL · OpenCV</text>
     <text y="84" font-size="11" font-weight="400" fill="rgba(255,255,255,0.35)" font-family="JetBrains Mono, ui-monospace, monospace">screenshot placeholder</text>
   </g>
-  <g transform="translate(40 40)" fill="none" stroke="#8b2a8c" stroke-width="2" opacity="0.6">
+  <g transform="translate(40 40)" fill="none" stroke="#06B6D4" stroke-width="2" opacity="0.55">
     <rect x="0" y="0" width="80" height="60" rx="4"/>
     <circle cx="40" cy="30" r="14"/>
-    <circle cx="40" cy="30" r="4" fill="#8b2a8c"/>
+    <circle cx="40" cy="30" r="4" fill="#06B6D4"/>
   </g>
   <g transform="translate(520 300)" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5">
     <path d="M0 0 L20 -20 L40 0 L60 -10 L80 -5"/>

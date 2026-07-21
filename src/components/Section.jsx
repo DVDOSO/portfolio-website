@@ -3,32 +3,52 @@ import Reveal from './Reveal';
 
 function Section(props) {
     const isPortrait = typeof window !== 'undefined' && window.innerHeight > window.innerWidth;
+    const isMedia = props.figureStyle === 'media';
 
     const text = (
         <article className={styles.text}>
+            {props.eyebrow && <p className={styles.eyebrow}>{props.eyebrow}</p>}
             <h2 className={styles.title}>{props.title}</h2>
-            <p className={styles.caption} style={{ "maxWidth": '75%' }}>{props.text}</p>
-            {props.buttons.map((button) => (
-                <a
-                    id='nowrap'
-                    className={styles.buttonLink}
-                    key={button.text}
-                    href={button.link}
-                    {...(button.download ? { download: true } : {})}
-                    {...(button.external ? { target: '_blank', rel: 'noreferrer' } : {})}>
-                    {button.text}
-                </a>
-            ))}
+            <p className={styles.caption}>{props.text}</p>
+            {props.buttons.length > 0 && (
+                <div className={styles.actions}>
+                    {props.buttons.map((button) => (
+                        <a
+                            id='nowrap'
+                            className={styles.buttonLink}
+                            key={button.text}
+                            href={button.link}
+                            {...(button.download ? { download: true } : {})}
+                            {...(button.external ? { target: '_blank', rel: 'noreferrer' } : {})}>
+                            {button.text}
+                        </a>
+                    ))}
+                </div>
+            )}
         </article>
     );
 
     const figure = (
-        <img
-            className={styles.figure}
-            src={props.imgPath}
-            alt={props.title}
-            style={{ "width": "max(" + props.width + ", 15rem)" }}
-        />
+        <div className={`${styles.figureWrap} ${isMedia ? styles.media : styles.icon}`}>
+            {props.tint ? (
+                <span
+                    className={`${styles.figure} ${styles.tinted}`}
+                    role="img"
+                    aria-label={props.title}
+                    style={{
+                        WebkitMaskImage: `url("${props.imgPath}")`,
+                        maskImage: `url("${props.imgPath}")`,
+                    }}
+                />
+            ) : (
+                <img
+                    className={styles.figure}
+                    src={props.imgPath}
+                    alt={props.title}
+                    loading="lazy"
+                />
+            )}
+        </div>
     );
 
     if (isPortrait) {

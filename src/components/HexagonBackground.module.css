@@ -47,6 +47,8 @@
 .hexagon2 {
     position: absolute;
     opacity: var(--OPACITY);
+    /* recolor the aquamarine hexagon art toward a deeper cyan accent */
+    filter: saturate(1.7) hue-rotate(30deg) brightness(0.68);
 }
 
 .hexagon1 {

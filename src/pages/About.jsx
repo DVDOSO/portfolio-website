@@ -5,7 +5,7 @@ import styles from "./FoodImages.module.css";
 import HexagonBackground from "../components/HexagonBackground";
 
 function About() {
-    const accent = "aquamarine";
+    const accent = "var(--ACCENT)";
 
     return (
         <>
@@ -38,6 +38,8 @@ function About() {
                         imgPath="data_1197460.png"
                         order="left"
                         color={accent}
+                        tint
+                        eyebrow="The engineer"
                         title="Programmer."
                         text={
                             "I started coding at 11, hacking on Python projects after school and falling in love with the loop of build-break-learn. By high school I was deep in competitive programming with C++, training for the Canadian Computing Competition and learning to write code that wasn't just correct but fast.\n\nNow as a Computer Science co-op student at the University of Waterloo, I focus on building full-stack systems end-to-end: backends, APIs, frontends, and the infrastructure that ties them together. I care about systems that hold up under real load, code that reads cleanly six months later, and details most users will never consciously notice."
@@ -50,6 +52,8 @@ function About() {
                         imgPath="burgericon.png"
                         order="right"
                         color={accent}
+                        tint
+                        eyebrow="Beyond the code"
                         title="Outside of code."
                         text={
                             "My faith is central to how I move through life. It shapes my values, how I treat people, and how I approach challenges. It keeps me grounded when work doesn't.\n\nBeyond that, I'm a relentless food explorer. When I travel, I skip the chains and seek out small local restaurants, usually with the best food and the best stories. I cook too, mostly chasing dishes I've eaten somewhere and want to recreate. The gallery below is a small sample.\n\nI also play and watch a lot of sports: basketball, volleyball, soccer on the field; Raptors, Leafs, and Canadian men's soccer on TV. And in the gaps, video games. I treat the medium as an art form and admire the engineering and craft that goes into the best of them."

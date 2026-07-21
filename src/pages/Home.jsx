@@ -8,7 +8,7 @@ import "./styles.css";
 import HexagonBackground from "../components/HexagonBackground";
 
 function Home() {
-    const accent = "aquamarine";
+    const accent = "var(--ACCENT)";
 
     return (
         <>
@@ -22,6 +22,10 @@ function Home() {
 
                 <section className="hero">
                     <article className="mainCaption">
+                        <p className="availability">
+                            <span className="availabilityDot" />
+                            Open to internship opportunities
+                        </p>
                         <p className="eyebrow">Software Engineer</p>
                         <h1 className="mainTitle">
                             Hello, my <span id="nowrap">name is</span>{" "}
@@ -64,9 +68,10 @@ function Home() {
 
                 <section className="sections">
                     <Section
-                        imgPath="laptop_2490636.png"
+                        imgPath="placeholders/about-me.svg"
                         order="right"
                         color={accent}
+                        eyebrow="Who I am"
                         title="About Me."
                         text="I'm a software engineer focused on shipping well-built products end-to-end from system design through deployment. I care about the details: clean APIs, responsive UIs, and tests that actually catch regressions."
                         buttons={[
@@ -95,7 +100,7 @@ function Home() {
                                 ]}
                             />
                             <HomeProject
-                                image="homeprojects/gameboy.png"
+                                image="homeprojects/gameboy.svg"
                                 name="Game Boy Emulator"
                                 caption="Game Boy emulator built from scratch in C++ with SDL2, running Tetris and Pokémon Red at full speed. Complete LR35902 CPU passing all 501 SingleStepTests opcodes, full PPU rendering, and MBC1/MBC3 cartridge banking."
                                 buttons={[
@@ -112,9 +117,10 @@ function Home() {
                     </section>
 
                     <Section
-                        imgPath="resume-cv_2427462.png"
+                        imgPath="placeholders/qualifications.svg"
                         order="left"
                         color={accent}
+                        eyebrow="Credentials"
                         title="Qualifications."
                         text="University of Waterloo Honours Computer Science (co-op), GPA 3.96. CCC Senior 95th percentile, Euclid Distinction. Strong full-stack foundation across TypeScript, React/Next.js, .NET Core, FastAPI, and PostgreSQL."
                         buttons={[

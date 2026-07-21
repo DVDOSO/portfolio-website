@@ -4,6 +4,10 @@
     --DARK_COLOR_1: rgb(14, 14, 118);
     --DARK_COLOR_2: rgb(2, 2, 144);
 
+    /* Accent — change these two lines to re-theme the whole site */
+    --ACCENT: #06B6D4;
+    --ACCENT_RGB: 6, 182, 212;
+
     --HEADER_FONT_1: "Space Grotesk", system-ui, sans-serif;
     --PARAGRAPH_FONT_1: "Space Grotesk", system-ui, sans-serif;
     --HEAVY_FONT_1: "Space Grotesk", system-ui, sans-serif;
@@ -15,4 +19,27 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    /* Firefox scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: var(--ACCENT) rgba(14, 14, 118, 0.07);
+}
+
+/* Animated scrollbar gradient: a registered custom property we can smoothly
+   drive so the WebKit scrollbar thumb's conic gradient rotates. */
+@property --sb-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
+
+@keyframes sbFlow {
+    to {
+        --sb-angle: 360deg;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        animation: sbFlow 9s linear infinite;
+    }
 }

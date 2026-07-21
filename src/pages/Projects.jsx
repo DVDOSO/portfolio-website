@@ -63,7 +63,7 @@ function Projects() {
                             "A cycle-aware DMG (original Game Boy) emulator written from scratch in C++ with SDL2, running commercial titles like Tetris and Pokémon Red at full speed. The CPU is a complete LR35902 (SM83) core that passes all 501 opcodes of the SingleStepTests conformance suite.\n\nThe PPU renders background, window, and sprite layers with priority handling and the 10-sprites-per-line hardware limit, backed by MBC1/MBC3 cartridge banking, hardware-accurate DIV/TIMA timers, and full interrupt handling for VBlank, STAT, Timer, Serial, and Joypad events."
                         }
                         width="25vw"
-                        title="Game Boy Emulator"
+                        title="C++ Game Boy Emulator"
                         buttons={[
                             {
                                 text: "GitHub Repository",
@@ -74,20 +74,36 @@ function Projects() {
                 </section>
 
                 <section className="projectBrowser">
+                    <div className="projectBrowserHead">
+                        <p className="projectBrowserEyebrow">The full list</p>
+                        <h2 className="projectBrowserTitle">
+                            All Projects<span id="accent1">.</span>
+                        </h2>
+                    </div>
                     <div className="projectBrowserInner">
                         <ProjectIcon
+                            featured
                             name="Camera/Movement Detection App"
                             icon="projecticons/ph-camera.svg"
+                            tagline="Computer-vision dashboard that flags camera tampering by comparing live frames with SSIM, ORB and RANSAC homography."
+                            tags={["FastAPI", "Next.js", "OpenCV", "PostgreSQL", "Alembic"]}
                             link="https://github.com/DVDOSO/camera-view-recognition"
                         />
                         <ProjectIcon
-                            name="Gameboy Emulator"
+                            featured
+                            name="C++ Gameboy Emulator"
                             icon="projecticons/ph-gameboy.svg"
+                            tagline="Cycle-accurate DMG emulator written from scratch in C++, running Tetris and Pokémon Red at full speed."
+                            tags={["C++", "SDL2"]}
                             link="https://github.com/DVDOSO/Gameboy-Emulator"
                         />
                         <ProjectIcon
+                            featured
+                            wide
                             name="Eisenhower Matrix Planning App"
                             icon="projecticons/ph-powerboard.svg"
+                            tagline="Task planner that sorts work into an Eisenhower matrix by urgency and importance so you focus on what matters."
+                            tags={["SvelteKit", "Firebase", "Google Cloud Platform"]}
                             link="https://github.com/DVDOSO/PowerBoard"
                         />
                         <ProjectIcon
@@ -96,7 +112,7 @@ function Projects() {
                             link="https://github.com/DVDOSO/youtube-mp3-downloader"
                         />
                         <ProjectIcon
-                            name="Pygame Matching Game"
+                            name="Pygame Bullet Dodging Game"
                             icon="projecticons/ph-matchdodge.svg"
                             link="https://github.com/DVDOSO/MatchDodge"
                         />

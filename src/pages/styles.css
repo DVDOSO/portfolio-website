@@ -255,7 +255,7 @@
     .projectsLink {
         display: inline-block;
         padding: 0.8em 1.8em;
-        margin-top: 10vh;
+        margin-top: 5vh;
         font-family: var(--HEADER_FONT_1);
         font-size: clamp(1rem, 1.1vw, 1.3rem);
         font-weight: 500;
@@ -336,12 +336,49 @@
         margin-top: 5vh;
     }
 
+    .projectBrowserHead {
+        max-width: 1100px;
+        margin: 0 auto clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .projectBrowserEyebrow {
+        font-family: var(--MONO_FONT_1);
+        font-size: clamp(0.72rem, 0.82vw, 0.95rem);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        color: var(--ACCENT);
+        opacity: 0.9;
+        margin-bottom: 0.6rem;
+    }
+
+    .projectBrowserTitle {
+        font-family: var(--HEADER_FONT_1);
+        color: #fff;
+        font-weight: 700;
+        font-size: clamp(1.8rem, 2.5vw, 3rem);
+        letter-spacing: -0.015em;
+        line-height: 1.1;
+    }
+
     .projectBrowserInner {
         max-width: 1100px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(11rem, 100%), 1fr));
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
         gap: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    @media only screen and (min-width: 640px) {
+        .projectBrowserInner {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        .projectBrowserInner {
+            grid-template-columns: repeat(4, 1fr);
+        }
     }
 
     #headerBold {

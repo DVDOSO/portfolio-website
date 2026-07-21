@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <rect width="200" height="200" rx="36" fill="#1a1a2e"/>
   <rect x="5" y="5" width="190" height="190" rx="31" fill="none" stroke="rgba(6,182,212,0.22)" stroke-width="2"/>
-  <text x="100" y="104" text-anchor="middle" dominant-baseline="central" font-family="Space Grotesk, system-ui, sans-serif" font-weight="700" font-size="72" fill="#06B6D4">TP</text>
+  <g fill="none" stroke="#06B6D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="56" y="50" width="88" height="102" rx="10"/>
+    <rect x="84" y="42" width="32" height="16" rx="4"/>
+    <polyline points="70,84 77,91 88,78"/>
+    <line x1="100" y1="84" x2="128" y2="84"/>
+    <polyline points="70,116 77,123 88,110"/>
+    <line x1="100" y1="116" x2="128" y2="116"/>
+  </g>
 </svg>

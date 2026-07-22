@@ -1,0 +1,214 @@
+/* ---------- Browser frame (web-app screenshots) ---------- */
+
+.browser {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    background: #0f1226;
+    border: 1px solid rgba(var(--ACCENT_RGB), 0.16);
+    box-shadow: 0 30px 60px -30px rgba(14, 14, 118, 0.5);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+}
+
+.browser:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 42px 80px -32px rgba(14, 14, 118, 0.6);
+}
+
+.browserBar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.9rem;
+    background: #171a33;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dot {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: #3a3f5a;
+    flex-shrink: 0;
+}
+
+.red { background: #ff5f57; }
+.yellow { background: #febc2e; }
+.green { background: #28c840; }
+
+.urlPill {
+    margin-left: 0.6rem;
+    flex: 1;
+    max-width: 62%;
+    font-family: var(--MONO_FONT_1);
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.22rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.browserShot {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* When the frame is given a fixed height (Home), the shot fills and crops. */
+    flex: 1 1 auto;
+    min-height: 0;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* ---------- Diagonal overlapping screenshot stack ---------- */
+
+.stack {
+    position: relative;
+    /* Cards are absolutely positioned, so the stack needs an explicit width
+       (a % width would collapse inside the shrink-to-fit flex column). */
+    width: min(42vw, 32rem);
+    aspect-ratio: 1 / 1;
+}
+
+.stackCard {
+    position: absolute;
+    margin: 0;
+    width: 62%;
+    aspect-ratio: 16 / 10;
+    border-radius: 0.85rem;
+    overflow: hidden;
+    background: #0f1226;
+    border: 1px solid rgba(var(--ACCENT_RGB), 0.22);
+    box-shadow: 0 24px 50px -22px rgba(14, 14, 118, 0.6);
+    transition: transform 450ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 450ms ease;
+}
+
+.stackImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.stackTag {
+    position: absolute;
+    left: 0.7rem;
+    bottom: 0.7rem;
+    font-family: var(--MONO_FONT_1);
+    font-size: 0.68rem;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(15, 18, 38, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+}
+
+.stackCard:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: rotate(-5deg);
+}
+
+.stackCard:nth-child(2) {
+    top: 29%;
+    left: 20%;
+    transform: rotate(1deg);
+}
+
+.stackCard:nth-child(3) {
+    top: 58%;
+    left: 38%;
+    transform: rotate(5deg);
+}
+
+/* Fan the cards apart on hover */
+.stack:hover .stackCard:nth-child(1) {
+    transform: rotate(-7deg) translate(-7%, -6%);
+}
+
+.stack:hover .stackCard:nth-child(2) {
+    transform: rotate(1deg) translate(0, 0);
+}
+
+.stack:hover .stackCard:nth-child(3) {
+    transform: rotate(7deg) translate(7%, 6%);
+    box-shadow: 0 30px 60px -22px rgba(14, 14, 118, 0.7);
+}
+
+@media only screen and (orientation: portrait) {
+    .stack {
+        width: min(88vw, 26rem);
+        aspect-ratio: 5 / 4;
+    }
+}
+
+/* ---------- Game Boy showcase (emulator screenshots) ---------- */
+
+.gbStage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.85rem, 2.5vw, 1.75rem);
+    padding: clamp(1.5rem, 3.5vw, 2.5rem);
+    border-radius: 1.25rem;
+    background:
+        radial-gradient(100% 80% at 50% 0%, rgba(var(--ACCENT_RGB), 0.1), transparent 60%),
+        linear-gradient(160deg, #1a1d38 0%, #0f1226 100%);
+    border: 1px solid rgba(var(--ACCENT_RGB), 0.16);
+    box-shadow: 0 30px 60px -30px rgba(14, 14, 118, 0.5);
+    transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms ease;
+}
+
+.gbStage:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 42px 80px -32px rgba(14, 14, 118, 0.6);
+}
+
+.gbScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0;
+}
+
+.gbBezel {
+    padding: 0.55rem;
+    background: #0b0d1c;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 0.6rem;
+    box-shadow:
+        inset 0 0 0 2px rgba(0, 0, 0, 0.45),
+        0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+.gbShot {
+    display: block;
+    width: 100%;
+    max-width: clamp(8rem, 15vw, 11rem);
+    height: auto;
+    border-radius: 0.2rem;
+    image-rendering: pixelated;
+}
+
+.gbLabel {
+    font-family: var(--MONO_FONT_1);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+@media only screen and (orientation: portrait) {
+    .gbShot {
+        max-width: clamp(7rem, 32vw, 10rem);
+    }
+}

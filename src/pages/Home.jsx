@@ -3,173 +3,174 @@ import SocialButton from "../components/SocialButton";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
 import HomeProject from "../components/HomeProject";
+import { BrowserFrame, GameBoyShowcase } from "../components/Showcase";
+import Experience from "../components/Experience";
+import Avatar from "../components/Avatar";
+import CursorHint from "../components/CursorHint";
+import ScrollCue from "../components/ScrollCue";
 import "./styles.css";
 import HexagonBackground from "../components/HexagonBackground";
-import "animate.css";
-import { useState, useEffect } from "react";
-import Loading from "../components/Loading";
 
 function Home() {
-    const [isLoading, setIsLoading] = useState(true);
-    const [loaded, setLoaded] = useState(false);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 2500);
-
-        return () => clearTimeout(timer);
-    }, []);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoaded(true);
-        }, 1500);
-
-        return () => clearTimeout(timer);
-    }, []);
+    const accent = "var(--ACCENT)";
 
     return (
         <>
-            {isLoading && <Loading color="darkmagenta" />}
-            {loaded && (
-                <>
-                    <HexagonBackground
-                        image="hexagons/hexagon_home.svg"
-                        opacity={0.8}
-                    />
-                    <div className="background" />
-                    <div className="container home">
-                        <Nav color="darkmagenta" />
+            <HexagonBackground
+                image="hexagons/hexagon_about.svg"
+                opacity={1}
+            />
+            <div className="background" />
+            <div className="container home">
+                <Nav color={accent} />
 
-                        <section className="hero">
-                            <article className="mainCaption">
-                                <h1 className="mainTitle">
-                                    Hello, my <span id="nowrap">name is</span>{" "}
-                                    <br />{" "}
-                                    <b id="headerBold">
-                                        David Jiang<span id="accent1">.</span>
-                                    </b>
-                                </h1>
-                                <p className="caption">
-                                    I&apos;m a{" "}
-                                    <b id="darkcolor2">software developer</b>{" "}
-                                    and a{" "}
-                                    <b id="darkcolor2">computer science</b>{" "}
-                                    student at the{" "}
-                                    <b id="darkcolor2">
-                                        University of Waterloo, Canada
-                                    </b>
-                                    .
-                                </p>
-                                <section className="socials">
-                                    <SocialButton
-                                        name="GitHub"
-                                        address="https://github.com/DVDOSO"
-                                        icon="github-mark.svg"
-                                        width={50}
-                                    />
-                                    <SocialButton
-                                        name="LinkedIn"
-                                        address="https://www.linkedin.com/in/david-jiang-187b86181/"
-                                        icon="icons8-linkedin.svg"
-                                        width={50}
-                                    />
-                                </section>
-                            </article>
-                            <img
-                                className="avatar"
-                                src="avatar.png"
-                                alt="avatar"
-                                width={450}
+                <section className="hero">
+                    <article className="mainCaption">
+                        <p className="availability">
+                            <span className="availabilityDot" />
+                            Open to internship opportunities
+                        </p>
+                        <p className="eyebrow">Software Engineer</p>
+                        <h1 className="mainTitle">
+                            Hello, my <span id="nowrap">name is</span>{" "}
+                            <br />{" "}
+                            <b id="headerBold">
+                                David Jiang<span id="accent1">.</span>
+                            </b>
+                        </h1>
+                        <p className="caption">
+                            Full-stack engineer building practical systems at
+                            the intersection of <b id="darkcolor2">web</b> and{" "}
+                            <b id="darkcolor2">computer vision</b>.
+                            Previously at <b id="darkcolor2">APi Group Inc</b> and <b id="darkcolor2">StackAdapt</b>.
+                            Computer Science (co-op) at the{" "}
+                            <b id="darkcolor2">University of Waterloo</b>.
+                        </p>
+                        <section className="socials">
+                            <SocialButton
+                                name="GitHub"
+                                address="https://github.com/DVDOSO"
+                                icon="github-mark.svg"
+                                width={50}
                             />
-                        <p className="scroll">Scroll ▼</p>
+                            <SocialButton
+                                name="LinkedIn"
+                                address="https://www.linkedin.com/in/davidjiangdev/"
+                                icon="icons8-linkedin.svg"
+                                width={50}
+                            />
                         </section>
-
-                        <section className="sections">
-                                <Section
-                                    imgPath="laptop_2490636.png"
-                                    order="right"
-                                    color="darkmagenta"
-                                    title="About Me."
-                                    text="As a software developer who creates user-friendly products, I am known for focusing on the finer details and aspects of design in all of my work. My passion extends beyond coding through my interests and hobbies."
-                                    buttons={[
-                                        {
-                                            text: "Learn more about me!",
-                                            link: "#/about",
-                                        },
-                                    ]}
-                                    width="20vw"
-                                />
-
-                            <section className="homescreenProjects">
-                                <h1 className="header">
-                                    Here are some of my projects!
-                                </h1>
-                                <article className="projectDisplay">
-                                    <HomeProject
-                                        image="homeprojects/powerboard.png"
-                                        name="PowerBoard"
-                                        caption="Powerboard is a task management application. It allows you to visualize and execute tasks more efficiently. I designed the web application from scratch and created it using SvelteKit and the Google Firebase API."
-                                        buttons={[
-                                            {
-                                                text: "Try It Out!",
-                                                link: "https://powerboard-f656e.web.app/",
-                                            },
-                                            {
-                                                text: "GitHub Repository",
-                                                link: "https://github.com/DVDOSO/PowerBoard",
-                                            },
-                                        ]}
-                                    />
-                                    <HomeProject
-                                        image="homeprojects/matchdodge.png"
-                                        name="Match Dodge"
-                                        caption='Created using the Pygame module in Python, this game combines the popular memory card party game with the gameplay of a "Bullet Hell" game. All graphics and UI were designed from scratch in Photoshop.'
-                                        buttons={[
-                                            {
-                                                text: "Gameplay Demonstration",
-                                                link: "https://www.youtube.com/watch?v=Yd_JLDGS8_o",
-                                            },
-                                            {
-                                                text: "GitHub Repository",
-                                                link: "https://github.com/DVDOSO/MatchDodge",
-                                            },
-                                        ]}
-                                    />
-                                </article>
-                                <a href="#/projects" className="projectsLink">
-                                    Check out the rest of my projects!
-                                </a>
-                            </section>
-
-                                <Section
-                                    imgPath="resume-cv_2427462.png"
-                                    order="left"
-                                    color="darkmagenta"
-                                    title="Qualifications."
-                                    text="I strive for excellence in whatever I do, believing that dedication and hard work lead to success. Over the course of my academic and professional career, I have gained numerous valuable skills. I continuously seek opportunities to learn and grow, ensuring I stay at the forefront of my field."
-                                    buttons={[
-                                        {
-                                            text: "Download my resume!",
-                                            link: "David_Jiang_Resume.pdf",
-                                        },
-                                    ]}
-                                    width="18vw"
-                                />
-                        </section>
-                        <Contact color="darkmagenta" line="yes" />
-                        <footer>
-                            <p>&copy; David Jiang 2024</p>
-                            <a
-                                className="footnoteLink"
-                                href="https://github.com/DVDOSO/portfolio-website">
-                                GitHub Repository
-                            </a>
-                        </footer>
+                    </article>
+                    <div className="avatarBlock">
+                        <Avatar
+                            className="avatar"
+                            src="avatar.png"
+                            alt="avatar"
+                            width={450}
+                        />
+                        <CursorHint />
                     </div>
-                </>
-            )}
+                    <ScrollCue />
+                </section>
+
+                <section className="sections">
+                    <Section
+                        imgPath="placeholders/about-me.svg"
+                        order="right"
+                        color={accent}
+                        eyebrow="Who I am"
+                        title="About Me."
+                        text="I'm a software engineer focused on shipping well-built products end-to-end from system design through deployment. I care about the details: clean APIs, responsive UIs, and tests that actually catch regressions."
+                        buttons={[
+                            {
+                                text: "Learn more about me",
+                                link: "#/about",
+                            },
+                        ]}
+                        width="20vw"
+                    />
+
+                    <Experience color={accent} />
+
+                    <section className="homescreenProjects">
+                        <h1 className="header">Featured projects.</h1>
+                        <article className="projectDisplay">
+                            <HomeProject
+                                figureNode={
+                                    <BrowserFrame
+                                        src="starred/camera-label.png"
+                                        alt="Camera Watch labeling view: a grid of captured frames annotated with OK/ALERT ground-truth labels"
+                                        label="camera-watch/label"
+                                    />
+                                }
+                                name="Camera Watch"
+                                caption="Computer vision dashboard that flags camera tampering by comparing live frames against references with SSIM, ORB, and RANSAC homography. Auto-tuned thresholds reach 94.3% accuracy on 500 labeled samples."
+                                buttons={[
+                                    {
+                                        text: "GitHub Repository",
+                                        link: "https://github.com/DVDOSO/camera-view-recognition",
+                                    },
+                                ]}
+                            />
+                            <HomeProject
+                                figureNode={
+                                    <GameBoyShowcase
+                                        screens={[
+                                            {
+                                                src: "starred/gb-pokemon-title.png",
+                                                alt: "Pokémon Red title screen running in the emulator",
+                                                label: "Pokémon Red",
+                                            },
+                                            {
+                                                src: "starred/gb-tetris.png",
+                                                alt: "Tetris gameplay running in the emulator",
+                                                label: "Tetris",
+                                            },
+                                        ]}
+                                    />
+                                }
+                                name="Game Boy Emulator"
+                                caption="Game Boy emulator built from scratch in C++ with SDL2, running Tetris and Pokémon Red at full speed. Complete LR35902 CPU passing all 501 SingleStepTests opcodes, full PPU rendering, and MBC1/MBC3 cartridge banking."
+                                buttons={[
+                                    {
+                                        text: "GitHub Repository",
+                                        link: "https://github.com/DVDOSO/Gameboy-Emulator",
+                                    },
+                                ]}
+                            />
+                        </article>
+                        <a href="#/projects" className="projectsLink">
+                            See all projects
+                        </a>
+                    </section>
+
+                    <Section
+                        imgPath="placeholders/qualifications.svg"
+                        order="left"
+                        color={accent}
+                        eyebrow="Credentials"
+                        title="Qualifications."
+                        text="University of Waterloo Honours Computer Science (co-op), GPA 3.96. CCC Senior 95th percentile, Euclid Distinction. Strong full-stack foundation across TypeScript, React/Next.js, .NET Core, FastAPI, and PostgreSQL."
+                        buttons={[
+                            {
+                                text: "Download my resume",
+                                link: "David_Jiang_Resume.pdf",
+                                download: true,
+                            },
+                        ]}
+                        width="18vw"
+                    />
+                </section>
+                <Contact color={accent} line="yes" />
+                <footer>
+                    <p>&copy; David Jiang {new Date().getFullYear()}</p>
+                    <a
+                        className="footnoteLink"
+                        href="https://github.com/DVDOSO/portfolio-website">
+                        GitHub Repository
+                    </a>
+                </footer>
+            </div>
         </>
     );
 }

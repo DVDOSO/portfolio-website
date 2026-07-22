@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="36" fill="#cc0000"/>
+  <g transform="translate(100 100)" fill="#fff">
+    <rect x="-44" y="-30" width="88" height="60" rx="14"/>
+    <polygon points="-12,-16 -12,16 16,0" fill="#cc0000"/>
+  </g>
+  <g transform="translate(100 152)" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="18">
+    <text>MP3</text>
+  </g>
+</svg>

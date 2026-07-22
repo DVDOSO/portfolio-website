@@ -55,13 +55,27 @@
     text-decoration: none;
     overflow: hidden;
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+}
+
+.downloadIcon {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pageLink:hover .downloadIcon,
+.pageLink:focus .downloadIcon {
+    transform: translateY(2px);
 }
 
 .pageLink:hover,
 .pageLink:focus {
     color: var(--ACCENT_COLOR_1);
-    transform: scale(110%);
-    transition: all ease 0.3s;
+    transition: color 250ms cubic-bezier(0.22, 1, 0.36, 1);
     text-decoration: none;
 }
 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 200" width="260" height="200" fill="none" stroke="#06B6D4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <!-- PLACEHOLDER: on-theme code-window icon for the "About Me" section. Replace with your own image if desired. -->
+  <rect x="24" y="30" width="212" height="150" rx="16"/>
+  <line x1="24" y1="66" x2="236" y2="66"/>
+  <circle cx="46" cy="48" r="4.5" fill="#06B6D4" stroke="none"/>
+  <circle cx="66" cy="48" r="4.5" fill="#06B6D4" stroke="none"/>
+  <circle cx="86" cy="48" r="4.5" fill="#06B6D4" stroke="none"/>
+  <polyline points="104,104 82,127 104,150"/>
+  <polyline points="156,104 178,127 156,150"/>
+  <line x1="140" y1="98" x2="120" y2="156"/>
+</svg>

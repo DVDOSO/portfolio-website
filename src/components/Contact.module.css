@@ -11,38 +11,68 @@
 .header {
     font-family: var(--HEADER_FONT_1);
     color: var(--DARK_COLOR_1);
-    font-weight: 400;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    margin-bottom: 3vh;
+    font-weight: 700;
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    letter-spacing: -0.015em;
+    margin-bottom: 1.5vh;
     margin-top: 8vh;
 }
 
 .blurb {
     font-family: var(--PARAGRAPH_FONT_1);
-    font-weight: 300;
-    font-size: clamp(0.75rem, 2vw, 1.25rem);
+    font-weight: 400;
+    font-size: clamp(0.85rem, 1.05vw, 1.15rem);
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 36rem;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .email {
-    border: 2px solid var(--ACCENT_COLOR_1);
-    padding: clamp(0.5rem, 0.7vw, 2rem);
     display: inline-block;
-    border-radius: 1rem;
+    padding: 0.7em 1.5em;
     margin: 3vh;
-    font-size: clamp(0.75rem, 1vw, 1rem);
-    font-family: var(--HEAVY_FONT_1);
-    text-decoration: none;
+    font-family: var(--MONO_FONT_1);
+    font-size: clamp(0.85rem, 1vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 0.005em;
     color: var(--DARK_COLOR_1);
-    box-shadow: 0.1rem 0.1rem 0.5rem gray;
-    transition: all ease 0.5s;
-    display: inline-block;
-    background-color: aliceblue;
+    background-color: transparent;
+    border: 1.5px solid var(--DARK_COLOR_1);
+    border-radius: 999px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    cursor: pointer;
+    transition:
+        color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 100ms ease;
+}
+
+.email::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(225, 225, 225);
+    transform: translateY(101%);
+    transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
 }
 
 .email:hover,
-.email:focus {
-    background-color: rgb(225, 225, 225);
-    transform: scale(110%);
+.email:focus-visible {
+    outline: none;
+}
+
+.email:hover::before,
+.email:focus-visible::before {
+    transform: translateY(0);
+}
+
+.email:active {
+    transform: scale(0.97);
 }
 
 .dividerContainer {

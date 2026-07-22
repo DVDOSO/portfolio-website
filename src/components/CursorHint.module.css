@@ -1,0 +1,46 @@
+.hint {
+    position: absolute;
+    top: 1rem;
+    left: 72%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.text {
+    font-family: var(--HAND_FONT_1);
+    font-weight: 500;
+    font-size: clamp(1rem, 1.55vw, 1.45rem);
+    line-height: 1;
+    color: var(--DARK_COLOR_1);
+    transform: rotate(-5deg);
+    white-space: nowrap;
+    margin-left: 2rem;
+}
+
+.arrow {
+    width: clamp(4.5rem, 6.5vw, 6rem);
+    height: auto;
+    margin-top: -0.75rem;
+    transform: rotate(3deg);
+}
+
+.line {
+    stroke: var(--DARK_COLOR_1);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* Avatar is hidden on portrait, so hide its hint too. */
+@media (orientation: portrait) {
+    .hint {
+        display: none;
+    }
+}

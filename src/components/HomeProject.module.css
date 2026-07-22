@@ -2,7 +2,7 @@
     padding: clamp(1rem, 1vw, 2rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: max(1vw, 1rem);
     width: max(35vw, 25rem);
@@ -15,35 +15,97 @@
     transition: transform 0.5s ease;
 }
 
+.figure {
+    width: 100%;
+    height: clamp(13rem, 20vw, 17rem);
+    margin-bottom: max(1vw, 1rem);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* Both showcases fill the fixed figure height so the two cards match exactly. */
+.figure > * {
+    height: 100%;
+}
+
+.title {
+    font-family: var(--HEADER_FONT_1);
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--ACCENT);
+    margin: 0.6rem auto 0;
+}
+
 .caption {
     font-family: var(--PARAGRAPH_FONT_1);
-    color: white;
-    font-size: max(1vw, 1rem);
-    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: max(0.95vw, 0.95rem);
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 0;
     margin-bottom: 1.5rem;
 }
 
 .buttonLink {
-    padding: clamp(0.5rem, 0.7vw, 2rem);
-    margin-right: clamp(0.5rem, 1vw, 2rem);
-    border: 2px solid white;
-    border-radius: 1rem;
-    font-size: clamp(1rem, 1vw, 2rem);
-    font-family: var(--HEAVY_FONT_1);
-    text-decoration: none;
-    color: white;
-    box-shadow: 0 0 0.5rem gray;
-    transition: all ease 0.5s;
     display: inline-block;
+    padding: 0.7em 1.5em;
+    margin-right: clamp(0.5rem, 1vw, 1.25rem);
+    font-family: var(--HEADER_FONT_1);
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    color: white;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    cursor: pointer;
+    transition:
+        color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 250ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 100ms ease;
+}
+
+.buttonLink::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(101%);
+    transition: transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
 }
 
 .buttonLink:hover,
-.buttonLink:focus {
-    background-color: rgb(150, 150, 150);
-    transform: scale(110%);
+.buttonLink:focus-visible {
+    outline: none;
+}
+
+.buttonLink:hover::before,
+.buttonLink:focus-visible::before {
+    transform: translateY(0);
+}
+
+.buttonLink:active {
+    transform: scale(0.97);
 }
 
 .buttons {
-    position: relative;
-    bottom: 0;
+    margin-top: auto;
 }

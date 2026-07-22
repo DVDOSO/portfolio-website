@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220" fill="none" stroke="#06B6D4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <!-- PLACEHOLDER: on-theme certificate/seal icon for the "Qualifications" section. Replace with your own image if desired. -->
+  <rect x="46" y="24" width="128" height="172" rx="14"/>
+  <circle cx="110" cy="82" r="24"/>
+  <polyline points="98,83 107,93 124,74"/>
+  <line x1="72" y1="140" x2="148" y2="140"/>
+  <line x1="72" y1="162" x2="126" y2="162"/>
+</svg>

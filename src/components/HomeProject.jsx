@@ -3,7 +3,12 @@ import styles from './HomeProject.module.css';
 function HomeProject(props) {
     return (
         <section className={styles.container}>
-            <img src={props.image} alt={props.name} className={styles.image} />
+            {props.figureNode ? (
+                <div className={styles.figure}>{props.figureNode}</div>
+            ) : (
+                <img src={props.image} alt={props.name} className={styles.image} />
+            )}
+            <h3 className={styles.title}>{props.name}</h3>
             <figcaption className={styles.caption}>
                 {props.caption}
             </figcaption>

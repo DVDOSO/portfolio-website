@@ -5,9 +5,9 @@ function Contact(props) {
     return (
         <section className={styles.container} style={{"--ACCENT_COLOR_1": props.color}}>
             {props.line? <div className={styles.dividerContainer}><hr className={styles.divider}/></div> : ''}
-            <h1 className={styles.header}>Contact Me!</h1>
-            <p className={styles.blurb}>If you are interested in hiring me or collaborating with me on projects, feel free to reach out!</p>
-            <a href="mailto:davidjiang0307@gmail.com" className={styles.email}>Email Me!</a>
+            <h1 className={styles.header}>Get in touch<span id="accent1">.</span></h1>
+            <p className={styles.blurb}>Open to internships and collaborations. Email is the fastest way to reach me.</p>
+            <a href="mailto:davidjiang0307@gmail.com" className={styles.email}>davidjiang0307@gmail.com</a>
             <section className={styles.socials}>
                 <SocialButton
                     name="GitHub"
@@ -15,7 +15,7 @@ function Contact(props) {
                     icon="github-mark.svg"
                     width={50}
                 />
-                <SocialButton name="LinkedIn" address="https://www.linkedin.com/in/david-jiang-187b86181/"
+                <SocialButton name="LinkedIn" address="https://www.linkedin.com/in/davidjiangdev/"
                     icon="icons8-linkedin.svg"
                     width={50}
                 />

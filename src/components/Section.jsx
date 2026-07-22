@@ -28,7 +28,9 @@ function Section(props) {
         </article>
     );
 
-    const figure = (
+    const figure = props.figureNode ? (
+        props.figureNode
+    ) : (
         <div className={`${styles.figureWrap} ${isMedia ? styles.media : styles.icon}`}>
             {props.tint ? (
                 <span

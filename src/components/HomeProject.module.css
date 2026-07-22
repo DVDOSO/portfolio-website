@@ -2,7 +2,7 @@
     padding: clamp(1rem, 1vw, 2rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: max(1vw, 1rem);
     width: max(35vw, 25rem);
@@ -15,11 +15,47 @@
     transition: transform 0.5s ease;
 }
 
+.figure {
+    width: 100%;
+    height: clamp(13rem, 20vw, 17rem);
+    margin-bottom: max(1vw, 1rem);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+/* Both showcases fill the fixed figure height so the two cards match exactly. */
+.figure > * {
+    height: 100%;
+}
+
+.title {
+    font-family: var(--HEADER_FONT_1);
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+    letter-spacing: -0.01em;
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--ACCENT);
+    margin: 0.6rem auto 0;
+}
+
 .caption {
     font-family: var(--PARAGRAPH_FONT_1);
-    color: white;
-    font-size: max(1vw, 1rem);
-    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: max(0.95vw, 0.95rem);
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 0;
     margin-bottom: 1.5rem;
 }
 
@@ -71,6 +107,5 @@
 }
 
 .buttons {
-    position: relative;
-    bottom: 0;
+    margin-top: auto;
 }

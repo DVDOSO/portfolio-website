@@ -3,6 +3,7 @@ import SocialButton from "../components/SocialButton";
 import Section from "../components/Section";
 import Contact from "../components/Contact";
 import HomeProject from "../components/HomeProject";
+import { BrowserFrame, GameBoyShowcase } from "../components/Showcase";
 import Experience from "../components/Experience";
 import Avatar from "../components/Avatar";
 import CursorHint from "../components/CursorHint";
@@ -95,7 +96,13 @@ function Home() {
                         <h1 className="header">Featured projects.</h1>
                         <article className="projectDisplay">
                             <HomeProject
-                                image="homeprojects/camera-watch.svg"
+                                figureNode={
+                                    <BrowserFrame
+                                        src="starred/camera-label.png"
+                                        alt="Camera Watch labeling view: a grid of captured frames annotated with OK/ALERT ground-truth labels"
+                                        label="camera-watch/label"
+                                    />
+                                }
                                 name="Camera Watch"
                                 caption="Computer vision dashboard that flags camera tampering by comparing live frames against references with SSIM, ORB, and RANSAC homography. Auto-tuned thresholds reach 94.3% accuracy on 500 labeled samples."
                                 buttons={[
@@ -106,7 +113,22 @@ function Home() {
                                 ]}
                             />
                             <HomeProject
-                                image="homeprojects/gameboy.svg"
+                                figureNode={
+                                    <GameBoyShowcase
+                                        screens={[
+                                            {
+                                                src: "starred/gb-pokemon-title.png",
+                                                alt: "Pokémon Red title screen running in the emulator",
+                                                label: "Pokémon Red",
+                                            },
+                                            {
+                                                src: "starred/gb-tetris.png",
+                                                alt: "Tetris gameplay running in the emulator",
+                                                label: "Tetris",
+                                            },
+                                        ]}
+                                    />
+                                }
                                 name="Game Boy Emulator"
                                 caption="Game Boy emulator built from scratch in C++ with SDL2, running Tetris and Pokémon Red at full speed. Complete LR35902 CPU passing all 501 SingleStepTests opcodes, full PPU rendering, and MBC1/MBC3 cartridge banking."
                                 buttons={[

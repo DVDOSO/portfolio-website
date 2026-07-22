@@ -4,6 +4,7 @@ import ProjectIcon from "../components/ProjectIcon";
 import Contact from "../components/Contact";
 import HexagonBackground from "../components/HexagonBackground";
 import ScrollCue from "../components/ScrollCue";
+import { StackedShots, GameBoyShowcase } from "../components/Showcase";
 
 function Projects() {
     const accent = "var(--ACCENT)";
@@ -36,10 +37,29 @@ function Projects() {
 
                 <section className="starred">
                     <Section
-                        imgPath="starred/camera-watch.svg"
                         order="left"
                         color={accent}
-                        figureStyle="media"
+                        figureNode={
+                            <StackedShots
+                                shots={[
+                                    {
+                                        src: "starred/camera-compare.png",
+                                        alt: "Compare view flagging a camera obstruction with an ALERT decision panel",
+                                        label: "Compare",
+                                    },
+                                    {
+                                        src: "starred/camera-metrics.png",
+                                        alt: "Metrics view showing 96% F1 score and a confusion matrix",
+                                        label: "Metrics",
+                                    },
+                                    {
+                                        src: "starred/camera-label.png",
+                                        alt: "Labeling view: a grid of captured frames annotated with OK/ALERT ground-truth labels",
+                                        label: "Label",
+                                    },
+                                ]}
+                            />
+                        }
                         eyebrow="Featured project"
                         title="Camera Obstruction & Movement Detection App"
                         text={
@@ -55,10 +75,24 @@ function Projects() {
                     />
 
                     <Section
-                        imgPath="starred/gameboy.svg"
                         order="right"
                         color={accent}
-                        figureStyle="media"
+                        figureNode={
+                            <GameBoyShowcase
+                                screens={[
+                                    {
+                                        src: "starred/gb-pokemon-title.png",
+                                        alt: "Pokémon Red title screen running in the emulator",
+                                        label: "Pokémon Red",
+                                    },
+                                    {
+                                        src: "starred/gb-tetris.png",
+                                        alt: "Tetris gameplay running in the emulator",
+                                        label: "Tetris",
+                                    },
+                                ]}
+                            />
+                        }
                         eyebrow="Featured project"
                         text={
                             "A cycle-aware DMG (original Game Boy) emulator written from scratch in C++ with SDL2, running commercial titles like Tetris and Pokémon Red at full speed. The CPU is a complete LR35902 (SM83) core that passes all 501 opcodes of the SingleStepTests conformance suite.\n\nThe PPU renders background, window, and sprite layers with priority handling and the 10-sprites-per-line hardware limit, backed by MBC1/MBC3 cartridge banking, hardware-accurate DIV/TIMA timers, and full interrupt handling for VBlank, STAT, Timer, Serial, and Joypad events."

@@ -1,64 +1,46 @@
 .hint {
-    display: inline-flex;
+    position: absolute;
+    top: 1rem;
+    left: 72%;
+    transform: translateX(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.55rem;
-    margin: -0.6rem 0 0;
-    font-family: var(--MONO_FONT_1);
-    font-size: clamp(0.7rem, 0.8vw, 0.85rem);
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--DARK_COLOR_2);
-    opacity: 0.72;
-    white-space: nowrap;
+    width: max-content;
     pointer-events: none;
-    animation: hintIn 0.8s ease both;
+    opacity: 1;
 }
 
-.dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background: var(--ACCENT);
-    box-shadow: 0 0 0 0 rgba(var(--ACCENT_RGB), 0.6);
-    animation: hintPulse 2s infinite;
+.text {
+    font-family: var(--HAND_FONT_1);
+    font-weight: 500;
+    font-size: clamp(1rem, 1.55vw, 1.45rem);
+    line-height: 1;
+    color: var(--DARK_COLOR_1);
+    transform: rotate(-5deg);
+    white-space: nowrap;
+    margin-left: 2rem;
 }
 
-@keyframes hintIn {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-    to {
-        opacity: 0.72;
-        transform: none;
-    }
+.arrow {
+    width: clamp(4.5rem, 6.5vw, 6rem);
+    height: auto;
+    margin-top: -0.75rem;
+    transform: rotate(3deg);
 }
 
-@keyframes hintPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(var(--ACCENT_RGB), 0.5);
-    }
-    70% {
-        box-shadow: 0 0 0 7px rgba(var(--ACCENT_RGB), 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(var(--ACCENT_RGB), 0);
-    }
+.line {
+    stroke: var(--DARK_COLOR_1);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 }
 
 /* Avatar is hidden on portrait, so hide its hint too. */
 @media (orientation: portrait) {
     .hint {
         display: none;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hint {
-        animation: none;
-        opacity: 0.72;
-    }
-    .dot {
-        animation: none;
     }
 }

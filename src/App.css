@@ -12,6 +12,7 @@
     --PARAGRAPH_FONT_1: "Space Grotesk", system-ui, sans-serif;
     --HEAVY_FONT_1: "Space Grotesk", system-ui, sans-serif;
     --MONO_FONT_1: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --HAND_FONT_1: "Caveat", "Segoe Script", "Comic Sans MS", cursive;
 }
 
 html {

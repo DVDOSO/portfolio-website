@@ -87,6 +87,7 @@
     }
 
     .avatarBlock {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -266,7 +267,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        align-items: flex-start;
+        align-items: stretch;
     }
 
     .projectsLink {
@@ -325,12 +326,13 @@
         padding: 1.5rem clamp(1rem, 4vw, 3rem);
         font-family: var(--MONO_FONT_1);
         font-size: clamp(0.75rem, 0.85vw, 0.95rem);
-        color: rgba(14, 14, 118, 0.6);
+        color: rgba(255, 255, 255, 0.6);
         border-top: 1px solid rgba(14, 14, 118, 0.1);
+        background-color: #0f1128;
     }
 
     .footnoteLink {
-        color: var(--DARK_COLOR_2);
+        color: rgba(255, 255, 255, 0.6);
         text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: color 250ms ease, border-color 250ms ease;
@@ -338,13 +340,13 @@
 
     .footnoteLink:hover,
     .footnoteLink:focus {
-        color: var(--DARK_COLOR_1);
+        color: rgba(255, 255, 255);
         border-bottom-color: var(--ACCENT);
         opacity: 1;
     }
 
     .footnoteLink:active {
-        color: var(--DARK_COLOR_1);
+        color: rgba(255, 255, 255);
     }
 
     .projectBrowser {

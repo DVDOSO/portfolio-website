@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import styles from "./CursorHint.module.css";
 
 /**
- * A small permanent hint under the avatar nudging the visitor to move their
- * cursor (revealing the interactive dot grid / eye tracking). Only shown for
- * fine pointers (no cursor on touch).
+ * A casual, handwritten hint that sits above the avatar's head — as if the
+ * avatar is saying it — with a hand-drawn line pointing down to the head,
+ * nudging the visitor to move their cursor (the eyes follow it). Fine pointers
+ * only (no cursor on touch).
  */
 function CursorHint() {
     const [show, setShow] = useState(false);
@@ -18,10 +19,17 @@ function CursorHint() {
     if (!show) return null;
 
     return (
-        <p className={styles.hint} aria-hidden="true">
-            <span className={styles.dot} />
-            Move your cursor
-        </p>
+        <div className={styles.hint} aria-hidden="true">
+            <span className={styles.text}>move your cursor!</span>
+            <svg
+                className={styles.arrow}
+                viewBox="0 0 100 100"
+                fill="none"
+                preserveAspectRatio="xMidYMid meet">
+                {/* hand-drawn line from the text down to the head */}
+                <path className={styles.line} d="M72 20 C 74 40, 60 54, 53 74" />
+            </svg>
+        </div>
     );
 }
 

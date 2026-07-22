@@ -4,6 +4,9 @@ import Section from "../components/Section";
 import Contact from "../components/Contact";
 import HomeProject from "../components/HomeProject";
 import Experience from "../components/Experience";
+import Avatar from "../components/Avatar";
+import CursorHint from "../components/CursorHint";
+import ScrollCue from "../components/ScrollCue";
 import "./styles.css";
 import HexagonBackground from "../components/HexagonBackground";
 
@@ -57,13 +60,16 @@ function Home() {
                             />
                         </section>
                     </article>
-                    <img
-                        className="avatar"
-                        src="avatar.png"
-                        alt="avatar"
-                        width={450}
-                    />
-                    <p className="scroll">Scroll ▼</p>
+                    <div className="avatarBlock">
+                        <Avatar
+                            className="avatar"
+                            src="avatar.png"
+                            alt="avatar"
+                            width={450}
+                        />
+                        <CursorHint />
+                    </div>
+                    <ScrollCue />
                 </section>
 
                 <section className="sections">

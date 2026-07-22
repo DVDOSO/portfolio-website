@@ -1,0 +1,9 @@
+.dotCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Background layer: above the base gradient (-2), below page content. */
+    z-index: -1;
+    pointer-events: none;
+}

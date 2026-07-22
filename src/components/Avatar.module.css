@@ -1,0 +1,85 @@
+.avatarWrap {
+    /* Eye geometry as a fraction of the avatar box (square image).
+       Tune these four pairs if the overlays drift off the drawn eyes. */
+    --eye-w: 8.4%;
+    --eye-h: 6.2%;
+    --eye-left-x: 41.7%;
+    --eye-left-y: 50.4%;
+    --eye-right-x: 57.4%;
+    --eye-right-y: 50.2%;
+
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+    width: 25vw;
+}
+
+/* Match the old .avatar behaviour: hidden on portrait / mobile layouts. */
+@media screen and (orientation: portrait) {
+    .avatarWrap {
+        display: none;
+    }
+}
+
+.avatarImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+}
+
+.eye {
+    position: absolute;
+    width: var(--eye-w);
+    height: var(--eye-h);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    /* White sclera with a soft top eyelid shadow so it blends with the art. */
+    background: radial-gradient(
+        120% 130% at 50% 30%,
+        #ffffff 0%,
+        #f4f1ee 62%,
+        #e7ded7 100%
+    );
+    box-shadow: inset 0 22% 26% -14% rgba(60, 40, 30, 0.55);
+    pointer-events: none;
+}
+
+.eyeLeft {
+    left: var(--eye-left-x);
+    top: var(--eye-left-y);
+}
+
+.eyeRight {
+    left: var(--eye-right-x);
+    top: var(--eye-right-y);
+}
+
+.iris {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* Iris fills most of the eye; the sclera clip keeps it inside. */
+    width: 74%;
+    height: 88%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(
+        circle at 42% 38%,
+        #4a3b34 0%,
+        #241a16 45%,
+        #100a08 100%
+    );
+}
+
+.glint {
+    position: absolute;
+    left: 26%;
+    top: 20%;
+    width: 24%;
+    height: 24%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 55% 120% 0 -3% rgba(255, 255, 255, 0.6);
+}

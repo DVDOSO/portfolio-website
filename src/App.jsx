@@ -4,6 +4,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Projects from './pages/Projects.jsx'
 import Blog from './pages/Blog.jsx'
+import DotGrid from './components/DotGrid.jsx'
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <DotGrid />
       <HashRouter>
         <ScrollToTop />
         <Routes>

@@ -3,6 +3,7 @@ import Section from "../components/Section";
 import ProjectIcon from "../components/ProjectIcon";
 import Contact from "../components/Contact";
 import HexagonBackground from "../components/HexagonBackground";
+import ScrollCue from "../components/ScrollCue";
 
 function Projects() {
     const accent = "var(--ACCENT)";
@@ -30,7 +31,7 @@ function Projects() {
                             in C++.
                         </p>
                     </article>
-                    <p className="scroll">Scroll ▼</p>
+                    <ScrollCue />
                 </section>
 
                 <section className="starred">

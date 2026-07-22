@@ -1,0 +1,64 @@
+.hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: -0.6rem 0 0;
+    font-family: var(--MONO_FONT_1);
+    font-size: clamp(0.7rem, 0.8vw, 0.85rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--DARK_COLOR_2);
+    opacity: 0.72;
+    white-space: nowrap;
+    pointer-events: none;
+    animation: hintIn 0.8s ease both;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--ACCENT);
+    box-shadow: 0 0 0 0 rgba(var(--ACCENT_RGB), 0.6);
+    animation: hintPulse 2s infinite;
+}
+
+@keyframes hintIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 0.72;
+        transform: none;
+    }
+}
+
+@keyframes hintPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(var(--ACCENT_RGB), 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 7px rgba(var(--ACCENT_RGB), 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(var(--ACCENT_RGB), 0);
+    }
+}
+
+/* Avatar is hidden on portrait, so hide its hint too. */
+@media (orientation: portrait) {
+    .hint {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hint {
+        animation: none;
+        opacity: 0.72;
+    }
+    .dot {
+        animation: none;
+    }
+}

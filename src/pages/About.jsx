@@ -3,6 +3,7 @@ import Section from "../components/Section";
 import Contact from "../components/Contact";
 import styles from "./FoodImages.module.css";
 import HexagonBackground from "../components/HexagonBackground";
+import ScrollCue from "../components/ScrollCue";
 
 function About() {
     const accent = "var(--ACCENT)";
@@ -30,7 +31,7 @@ function About() {
                             when I&apos;m not at a keyboard.
                         </p>
                     </article>
-                    <p className="scroll">Scroll ▼</p>
+                    <ScrollCue />
                 </section>
 
                 <section className="sections">
